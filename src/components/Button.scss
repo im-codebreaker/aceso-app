@@ -1,0 +1,22 @@
+@use '../assets/styles/colors';
+@use '../assets/styles/functions';
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: functions.space(1) functions.space(3);
+  color: colors.$light-100;
+  font-family: contentSemiBold;
+}
+.primary {
+  background-color: colors.$primary;
+  &:hover {
+    background-color: colors.$primary-darker;
+  }
+}
+.secondary {
+  background-color: colors.$secondary;
+  &:hover {
+    background-color: colors.$secondary-darker;
+  }
+}

@@ -1,0 +1,32 @@
+@use './assets/styles/colors';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: titleBold;
+  color: colors.$primary;
+}
+body {
+  font-family: contentRegular;
+  color: colors.$dark-700;
+  background-color: colors.$light-100;
+}
+a {
+  color: colors.$primary;
+  font-size: 0.875rem;
+  font-family: contentRegular;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  width: 80vw;
+  margin-inline: auto;
+}

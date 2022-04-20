@@ -1,27 +1,26 @@
 import * as React from 'react';
+import Button from './Button';
+import Form from './Form';
+import FormInput from './FormInput';
+import FormHeading from './FormHeading';
+import FormFooter from './FormFooter';
 import { Link } from 'react-router-dom';
 
 export default function LoginForm() {
   return (
-    <section className='section-login'>
-      <div className='section-login_heading'>
+    <Form type='login'>
+      <FormHeading>
         <h2>Connect to Aceso</h2>
         <p>Connect to your Aceso account with your email.</p>
-      </div>
-      <form className='section-login_form'>
-        <div class='signup-form_group'>
-          <label>Email</label>
-          <input type='text' placeholder='Enter email' />
-        </div>
-        <div class='signup-form_group'>
-          <label>Password</label>
-          <input type='password' placeholder='**********' />
-        </div>
-        <button type='submit'>Continue</button>
-      </form>
-      <div className='section-login_footer'>
+      </FormHeading>
+      <FormInput label='Email' type='text' placeholder='Enter email' />
+      <FormInput label='Password' type='password' placeholder='**********' />
+      <Button type='submit' className='primary'>
+        Continue
+      </Button>
+      <FormFooter>
         Don't have an account ? <Link to='/register'>Register</Link>
-      </div>
-    </section>
+      </FormFooter>
+    </Form>
   );
 }

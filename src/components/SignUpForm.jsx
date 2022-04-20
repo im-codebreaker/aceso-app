@@ -1,35 +1,35 @@
 import * as React from 'react';
+import Button from './Button';
+import Form from './Form';
+import FormInput from './FormInput';
+import FormHeading from './FormHeading';
+import FormFooter from './FormFooter';
 import { Link } from 'react-router-dom';
 
 export default function SignUpForm() {
   return (
-    <section className='section-signup'>
-      <div className='section-signup_heading'>
+    <Form type='signup'>
+      <FormHeading>
         <h2>Create your Aceso account</h2>
         <p>Join us and create an account now.</p>
-      </div>
-      <form className='section-signup_form'>
-        <div class='signup-form_group'>
-          <label>Fullname</label>
-          <input type='text' placeholder='Enter email' />
-        </div>
-        <div class='signup-form_group'>
-          <label>Email</label>
-          <input type='text' placeholder='Enter email' />
-        </div>
-        <div class='signup-form_group'>
-          <label>Password</label>
-          <input type='password' placeholder='**********' />
-        </div>
-        <p>
-          By creating a new account,you're agree to our Terms & Conditions and
-          Privacy Policy
-        </p>
-        <button type='submit'>Create account</button>
-      </form>
-      <div className='section-signup_footer'>
+      </FormHeading>
+      <FormInput
+        label='Fullname'
+        type='text'
+        placeholder='Enter your fullname'
+      />
+      <FormInput label='Email' type='text' placeholder='Enter email' />
+      <FormInput label='Password' type='password' placeholder='**********' />
+      <p>
+        By creating a new account,you're agree to our Terms & Conditions and
+        Privacy Policy
+      </p>
+      <Button type='submit' className='primary'>
+        Create Account
+      </Button>
+      <FormFooter>
         Already have an account ? <Link to='/login'>Login</Link>
-      </div>
-    </section>
+      </FormFooter>
+    </Form>
   );
 }
