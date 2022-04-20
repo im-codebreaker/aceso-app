@@ -1,0 +1,36 @@
+@font-face {
+  font-family: titleBold;
+  src: local('Baloo2 Bold'), local('Baloo2-Bold');
+  src: url(../fonts/Baloo2-Bold.woff2) format('woff2'),
+    url(../fonts/Baloo2-Bold.eot?#iefix) format('embedded-opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: contentRegular;
+  src: local('Mukta Regular'), local('Mukta-Regular');
+  src: url(../fonts/Mukta-Regular.woff2) format('woff2'),
+    url(../fonts/Mukta-Regular.eot?#iefix) format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: contentSemiBold;
+  src: local('Mukta SemiBold'), local('Mukta-SemiBold');
+  src: url(../fonts/Mukta-SemiBold.woff2) format('woff2'),
+    url(../fonts/Mukta-SemiBold.eot?#iefix) format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: contentExtraLight;
+  src: local('Mukta ExtraLight'), local('Mukta-ExtraLight');
+  src: url(../fonts/Mukta-ExtraLight.woff2) format('woff2'),
+    url(../fonts/Mukta-ExtraLight.eot?#iefix) format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
