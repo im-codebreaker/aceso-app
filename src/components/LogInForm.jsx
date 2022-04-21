@@ -5,7 +5,7 @@ import { useAuth } from 'context/Auth';
 import FormInput from './FormInput';
 import FormHeading from './FormHeading';
 import FormFooter from './FormFooter';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -16,6 +16,7 @@ const schema = yup.object({
 });
 
 function LogInForm() {
+  const [hasError, setHasError] = React.useState(null);
   const {
     register,
     handleSubmit,
@@ -25,13 +26,19 @@ function LogInForm() {
   });
 
   const { signIn } = useAuth();
+
+  const navigate = useNavigate();
+
   const onSubmit = async ({ email, password }) => {
-    const { user, error } = await signIn({ email, password });
+    const { error } = await signIn({ email, password });
 
     if (error) {
-      console.error(error);
+      setHasError(error.message);
+      setTimeout(() => {
+        setHasError(null);
+      }, 5000);
     } else {
-      console.log(user);
+      navigate('/dashboard');
     }
   };
 
@@ -40,6 +47,12 @@ function LogInForm() {
       <FormHeading>
         <h2>Connect to Aceso</h2>
         <p>Connect to your Aceso account with your email.</p>
+        {hasError && (
+          <div>
+            {hasError} - Email and password seems to not match, please verify
+            this account is existing.
+          </div>
+        )}
       </FormHeading>
       <FormInput
         label='Email'

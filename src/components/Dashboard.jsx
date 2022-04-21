@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Navigate } from 'react-router-dom';
+import { useAuth } from 'context/Auth';
 
-function Dashboard({ user }) {
-  if (!user) {
-    return <Navigate to='/login' replace />;
-  }
+function Dashboard() {
+  const { user } = useAuth();
+
+  return <h1>Hello {user.email}</h1>;
 }
 
 export { Dashboard };

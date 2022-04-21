@@ -9,19 +9,15 @@ export function useAuth() {
 
 export default function AuthProvider({ children }) {
   const [user, setUser] = React.useState();
-  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     const session = supabase.auth.session();
-    console.log(session);
 
     setUser(session?.user ?? null);
-    setLoading(false);
 
     const { data: listener } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         setUser(session?.user ?? null);
-        setLoading(false);
       }
     );
 

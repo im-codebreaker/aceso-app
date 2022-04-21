@@ -4,11 +4,12 @@ import Form from './Form';
 import FormInput from './FormInput';
 import FormHeading from './FormHeading';
 import FormFooter from './FormFooter';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useAuth } from 'context/Auth';
+
 const schema = yup.object({
   fullname: yup.string().min(3).required(),
   email: yup.string().email().required(),
@@ -25,14 +26,19 @@ function SignUpForm() {
   });
 
   const { signUp } = useAuth();
+  const navigate = useNavigate();
 
   const onSubmit = async ({ fullname, email, password }) => {
     const { error } = await signUp({ email, password });
-
     if (error) {
+      // @info supabase seems to not throw an error on duplicate email https://github.com/supabase/supabase-js/issues/296#issuecomment-962391773
       console.error(error);
     } else {
-      console.log('OK');
+      // @todo add modal succes created
+      // @todo message confirm mail inscription
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000);
     }
   };
 
