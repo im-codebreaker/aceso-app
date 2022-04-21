@@ -8,14 +8,14 @@ import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-
+import { useAuth } from 'context/Auth';
 const schema = yup.object({
   fullname: yup.string().min(3).required(),
   email: yup.string().email().required(),
   password: yup.string().required(),
 });
 
-export default function SignUpForm() {
+function SignUpForm() {
   const {
     register,
     handleSubmit,
@@ -24,7 +24,17 @@ export default function SignUpForm() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => console.log(data);
+  const { signUp } = useAuth();
+
+  const onSubmit = async ({ fullname, email, password }) => {
+    const { error } = await signUp({ email, password });
+
+    if (error) {
+      console.error(error);
+    } else {
+      console.log('OK');
+    }
+  };
 
   return (
     <Form type='signup' onSubmit={handleSubmit(onSubmit)}>
@@ -69,3 +79,5 @@ export default function SignUpForm() {
     </Form>
   );
 }
+
+export { SignUpForm };

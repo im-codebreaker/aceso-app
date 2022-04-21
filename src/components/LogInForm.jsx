@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Button from './Button';
 import Form from './Form';
+import { useAuth } from 'context/Auth';
 import FormInput from './FormInput';
 import FormHeading from './FormHeading';
 import FormFooter from './FormFooter';
@@ -13,7 +14,8 @@ const schema = yup.object({
   email: yup.string().email().required(),
   password: yup.string().required(),
 });
-export default function LoginForm() {
+
+function LogInForm() {
   const {
     register,
     handleSubmit,
@@ -21,7 +23,18 @@ export default function LoginForm() {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data) => console.log(data);
+
+  const { signIn } = useAuth();
+  const onSubmit = async ({ email, password }) => {
+    const { user, error } = await signIn({ email, password });
+
+    if (error) {
+      console.error(error);
+    } else {
+      console.log(user);
+    }
+  };
+
   return (
     <Form type='login' onSubmit={handleSubmit(onSubmit)}>
       <FormHeading>
@@ -53,3 +66,5 @@ export default function LoginForm() {
     </Form>
   );
 }
+
+export { LogInForm };

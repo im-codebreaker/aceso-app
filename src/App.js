@@ -1,22 +1,32 @@
 import './App.scss';
-import Header from 'components/Header';
-import Home from 'components/Home';
-import Footer from 'components/Footer';
-import LogInForm from 'components/LogInForm';
-import SignUpForm from 'components/SignUpForm';
+import * as React from 'react';
+import {
+  Header,
+  Home,
+  Footer,
+  LogInForm,
+  SignUpForm,
+  Dashboard,
+} from 'components';
 import { Routes, Route } from 'react-router-dom';
+import AuthProvider from 'context/Auth';
 
 function App() {
+  const user = false;
   return (
-    <div className='App'>
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/login' element={<LogInForm />} />
-        <Route path='/register' element={<SignUpForm />} />
-      </Routes>
-      <Footer />
-    </div>
+    <>
+      <AuthProvider>
+        <Header />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path='login' element={<LogInForm />} />
+          <Route path='register' element={<SignUpForm />} />
+          <Route path='dashboard' element={<Dashboard user={user} />} />
+          <Route path='*' element={<p>There's nothing here ! 404</p>} />
+        </Routes>
+        <Footer />
+      </AuthProvider>
+    </>
   );
 }
 
