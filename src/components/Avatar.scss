@@ -1,0 +1,16 @@
+$default: 56px;
+$small: 40px;
+$tiny: 24px;
+
+.default {
+  width: $default;
+  height: $default;
+}
+.small {
+  width: $small;
+  height: $small;
+}
+.tiny {
+  width: $tiny;
+  height: $tiny;
+}
