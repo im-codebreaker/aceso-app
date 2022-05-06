@@ -1,22 +1,24 @@
 $primary: hsl(241, 100%, 66%);
-$primary-darker: hsl(241, 100%, 60%);
-$primary-lighter: hsl(241, 97%, 70%);
+$primary-darker: hsl(241, 73%, 56%);
+$primary-lighter: hsl(241, 98%, 70%);
 
-$secondary: hsl(153, 100%, 66%);
-$secondary-darker: hsl(153, 100%, 56%);
-$secondary-lighter: hsl(153, 100%, 76%);
+$secondary: hsl(331, 98%, 62%);
+$secondary-darker: hsl(331, 73%, 52%);
+$secondary-lighter: hsl(331, 94%, 66%);
 
 $dark-900: hsl(241, 39%, 22%);
 $dark-700: hsl(242, 22%, 32%);
-$dark-500: hsl(243, 10%, 54%);
-$dark-300: hsl(240, 9%, 69%);
-$dark-100: hsl(240, 7%, 83%);
+$dark-500: hsl(240, 22%, 52%);
+$dark-300: hsl(240, 32%, 70%);
+$dark-100: hsl(240, 37%, 84%);
+$dark-000: hsl(240, 46%, 89%);
 
-$light-900: hsl(240, 39%, 93%);
-$light-700: hsl(240, 42%, 95%);
+$light-900: hsl(240, 60%, 99%);
+$light-700: hsl(240, 56%, 98%);
 $light-500: hsl(240, 47%, 97%);
-$light-300: hsl(240, 56%, 98%);
-$light-100: hsl(240, 60%, 99%);
+$light-300: hsl(240, 42%, 95%);
+$light-100: hsl(240, 39%, 93%);
+$light-000: hsl(240, 27%, 90%);
 
 $status-alert-900: hsl(0, 63%, 31%);
 $status-alert-700: hsl(0, 74%, 42%);
@@ -25,12 +27,12 @@ $status-alert-300: hsl(0, 94%, 82%);
 $status-alert-100: hsl(0, 100%, 96%);
 
 $status-information-900: hsl(224, 64%, 33%);
-$status-information-700: hsl(224, 64%, 33%);
-$status-information-500: hsl(224, 64%, 33%);
-$status-information-300: hsl(224, 64%, 33%);
-$status-information-100: hsl(224, 64%, 33%);
+$status-information-700: hsl(224, 76%, 48%);
+$status-information-500: hsl(217, 91%, 60%);
+$status-information-300: hsl(212, 96%, 78%);
+$status-information-100: hsl(214, 95%, 93%);
 
-$status-success-900: hsl(154, 94%, 34%);
+$status-success-900: hsl(154, 95%, 25%);
 $status-success-700: hsl(154, 94%, 39%);
 $status-success-500: hsl(150, 68%, 54%);
 $status-success-300: hsl(150, 79%, 63%);
@@ -39,5 +41,5 @@ $status-success-100: hsl(150, 100%, 95%);
 $status-warning-900: hsl(48, 100%, 45%);
 $status-warning-700: hsl(48, 100%, 50%);
 $status-warning-500: hsl(49, 98%, 64%);
-$status-warning-300: hsl(53, 97%, 72%);
+$status-warning-300: hsl(49, 98%, 64%);
 $status-warning-100: hsl(55, 96%, 90%);
