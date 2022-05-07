@@ -63,7 +63,7 @@ function LogInForm() {
             placeholder='Enter your password'
           />
         </FormGroup>
-        <Button type='submit' className='primary'>
+        <Button type='submit' variant='primary' fullWidth>
           Continue
         </Button>
         <FormFooter>

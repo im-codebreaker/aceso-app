@@ -1,10 +1,14 @@
 $primary: hsl(241, 100%, 66%);
 $primary-darker: hsl(241, 73%, 56%);
 $primary-lighter: hsl(241, 98%, 70%);
+$primary-focus: hsla(241, 98%, 70%, 50%);
+
+$primary-outline-hover: hsla(241, 98%, 70%, 10%);
 
 $secondary: hsl(331, 98%, 62%);
 $secondary-darker: hsl(331, 73%, 52%);
 $secondary-lighter: hsl(331, 94%, 66%);
+$secondary-focus: hsla(331, 94%, 66%, 50%);
 
 $dark-900: hsl(241, 39%, 22%);
 $dark-700: hsl(242, 22%, 32%);

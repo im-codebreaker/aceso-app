@@ -5,14 +5,18 @@ export default function Button({
   children,
   className = '',
   disabled = false,
+  fullWidth = false,
   size = 'medium',
   type = 'button',
+  variant = 'primary',
   ...rest
 }) {
   return (
     <button
       type={type}
-      className={`btn ${className}`.trim()}
+      className={`btn btn-${size} btn-${variant} ${
+        fullWidth ? 'btn-fw' : ''
+      } ${className}`.trim()}
       disabled={disabled}
       {...rest}
     >

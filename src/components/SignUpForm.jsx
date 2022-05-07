@@ -39,7 +39,11 @@ function SignUpForm() {
       }, 2000);
     }
   };
-
+  console.log(
+    <Button type='submit' className='btn-outlined'>
+      Create Account
+    </Button>
+  );
   return (
     <FormProvider {...methods}>
       <Form type='signup' onSubmit={methods.handleSubmit(onSubmit)}>
@@ -67,7 +71,7 @@ function SignUpForm() {
           By creating a new account,you're agree to our Terms & Conditions and
           Privacy Policy
         </p>
-        <Button type='submit' className='primary'>
+        <Button type='submit' variant='primary'>
           Create Account
         </Button>
         <FormFooter>
