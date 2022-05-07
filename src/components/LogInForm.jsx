@@ -11,6 +11,7 @@ import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import Input from './Input';
+import './LogInForm.scss';
 
 const schema = yup.object({
   email: yup.string().email().required(),
@@ -39,38 +40,43 @@ function LogInForm() {
   };
 
   return (
-    <FormProvider {...methods}>
-      <Form type='login' onSubmit={methods.handleSubmit(onSubmit)}>
-        <FormHeading>
-          <h2>Connect to Aceso</h2>
-          <p>Connect to your Aceso account with your email.</p>
-          {hasError && (
-            <div>
-              {hasError} - Email and password seems to not match, please verify
-              this account is existing.
-            </div>
-          )}
-        </FormHeading>
-        <FormGroup>
-          <Label>Email</Label>
-          <Input name='email' type='email' placeholder='Enter email' />
-        </FormGroup>
-        <FormGroup>
-          <Label>Password</Label>
-          <Input
-            name='password'
-            type='password'
-            placeholder='Enter your password'
-          />
-        </FormGroup>
-        <Button type='submit' variant='primary' fullWidth>
-          Continue
-        </Button>
-        <FormFooter>
-          Don't have an account ? <Link to='/register'>Register</Link>
-        </FormFooter>
-      </Form>
-    </FormProvider>
+    <main className='container'>
+      <FormProvider {...methods}>
+        <Form type='login' onSubmit={methods.handleSubmit(onSubmit)}>
+          <FormHeading>
+            <h2>Connect to Aceso</h2>
+            <p>Connect to your Aceso account with your email.</p>
+            {hasError && (
+              <div>
+                {hasError} - Email and password seems to not match, please
+                verify this account is existing.
+              </div>
+            )}
+          </FormHeading>
+          <FormGroup>
+            <Label>Email</Label>
+            <Input name='email' type='email' placeholder='Enter email' />
+          </FormGroup>
+          <FormGroup>
+            <Label>Password</Label>
+            <Input
+              name='password'
+              type='password'
+              placeholder='Enter your password'
+            />
+            <Link className='reset-link' to='/request-password'>
+              Forgot your password ?
+            </Link>
+          </FormGroup>
+          <Button type='submit' variant='primary' fullWidth>
+            Continue
+          </Button>
+          <FormFooter>
+            Don't have an account ? <Link to='/register'>Register</Link>
+          </FormFooter>
+        </Form>
+      </FormProvider>
+    </main>
   );
 }
 

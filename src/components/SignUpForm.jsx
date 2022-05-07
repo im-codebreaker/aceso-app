@@ -30,7 +30,6 @@ function SignUpForm() {
     const { error } = await signUp({ email, password });
     if (error) {
       // @info supabase seems to not throw an error on duplicate email https://github.com/supabase/supabase-js/issues/296#issuecomment-962391773
-      console.error(error);
     } else {
       // @todo add modal succes created
       // @todo message confirm mail inscription
@@ -39,46 +38,43 @@ function SignUpForm() {
       }, 2000);
     }
   };
-  console.log(
-    <Button type='submit' className='btn-outlined'>
-      Create Account
-    </Button>
-  );
   return (
-    <FormProvider {...methods}>
-      <Form type='signup' onSubmit={methods.handleSubmit(onSubmit)}>
-        <FormHeading>
-          <h2>Create your Aceso account</h2>
-          <p>Join us and create an account now.</p>
-        </FormHeading>
-        <FormGroup>
-          <Label>Fullname</Label>
-          <Input name='fullname' placeholder='Enter your fullname' />
-        </FormGroup>
-        <FormGroup>
-          <Label>Email</Label>
-          <Input name='email' type='email' placeholder='Enter your email' />
-        </FormGroup>
-        <FormGroup>
-          <Label>Password</Label>
-          <Input
-            name='password'
-            type='password'
-            placeholder='Enter your password'
-          />
-        </FormGroup>
-        <p>
-          By creating a new account,you're agree to our Terms & Conditions and
-          Privacy Policy
-        </p>
-        <Button type='submit' variant='primary'>
-          Create Account
-        </Button>
-        <FormFooter>
-          Already have an account ? <Link to='/login'>Login</Link>
-        </FormFooter>
-      </Form>
-    </FormProvider>
+    <main className='container'>
+      <FormProvider {...methods}>
+        <Form type='signup' onSubmit={methods.handleSubmit(onSubmit)}>
+          <FormHeading>
+            <h2>Create your Aceso account</h2>
+            <p>Join us and create an account now.</p>
+          </FormHeading>
+          <FormGroup>
+            <Label>Fullname</Label>
+            <Input name='fullname' placeholder='Enter your fullname' />
+          </FormGroup>
+          <FormGroup>
+            <Label>Email</Label>
+            <Input name='email' type='email' placeholder='Enter your email' />
+          </FormGroup>
+          <FormGroup>
+            <Label>Password</Label>
+            <Input
+              name='password'
+              type='password'
+              placeholder='Enter your password'
+            />
+          </FormGroup>
+          <p>
+            By creating a new account,you're agree to our Terms & Conditions and
+            Privacy Policy
+          </p>
+          <Button type='submit' variant='primary'>
+            Create Account
+          </Button>
+          <FormFooter>
+            Already have an account ? <Link to='/login'>Login</Link>
+          </FormFooter>
+        </Form>
+      </FormProvider>
+    </main>
   );
 }
 

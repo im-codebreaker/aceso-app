@@ -8,6 +8,8 @@ export default function Icon({
   style = 'line',
 }) {
   return (
-    <i class={`icon-ri ri-${name}-${style} ${size} ${className}`.trim()}></i>
+    <i
+      className={`icon-ri ri-${name}-${style} ${size} ${className}`.trim()}
+    ></i>
   );
 }

@@ -1,0 +1,8 @@
+@use '../assets/styles/colors';
+@use '../assets/styles/functions';
+@use '../assets/styles/variables';
+
+.reset-link {
+  margin: functions.space(1) 0;
+  text-align: right;
+}

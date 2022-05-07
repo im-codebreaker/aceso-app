@@ -14,7 +14,6 @@ export default function Input({
     register,
     formState: { isValid, errors },
   } = useFormContext();
-  console.log(errors);
   return (
     <>
       <input
