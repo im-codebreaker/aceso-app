@@ -1,4 +1,6 @@
 @use './assets/styles/colors';
+@use './assets/styles/functions';
+@use './assets/styles/variables';
 
 h1,
 h2,
@@ -9,6 +11,27 @@ h6 {
   font-family: titleBold;
   color: colors.$primary;
 }
+h1 {
+  font-size: variables.$heading-1;
+}
+h2 {
+  font-size: variables.$heading-2;
+}
+h3 {
+  font-size: variables.$heading-3;
+}
+h4 {
+  font-size: variables.$heading-4;
+}
+h5 {
+  font-size: variables.$heading-5;
+}
+h6 {
+  font-size: variables.$heading-6;
+}
+p {
+  font-size: variables.$body-small;
+}
 body {
   font-family: contentRegular;
   color: colors.$dark-500;
@@ -16,7 +39,6 @@ body {
 }
 a {
   color: colors.$primary;
-  font-size: 0.875rem;
   font-family: contentRegular;
 }
 .App {
@@ -29,4 +51,15 @@ a {
 .container {
   width: 80vw;
   margin-inline: auto;
+}
+.btn-link {
+  display: inline-block;
+  width: 100%;
+  padding: functions.space(1) functions.space(2);
+  color: colors.$light-900;
+  background-color: colors.$primary;
+  border-radius: 2px;
+  font-family: contentSemiBold;
+  text-align: center;
+  text-transform: uppercase;
 }

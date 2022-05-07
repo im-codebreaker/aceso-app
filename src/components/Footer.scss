@@ -1,6 +1,8 @@
 @use '../assets/styles/functions';
+@use '../assets/styles/variables';
 
 .footer {
   padding: functions.space(2);
+  max-height: variables.$footer-height;
   text-align: center;
 }

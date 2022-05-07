@@ -1,0 +1,8 @@
+@use '../assets/styles/colors';
+@use '../assets/styles/functions';
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: functions.space(3);
+}

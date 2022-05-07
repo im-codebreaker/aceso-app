@@ -1,14 +1,19 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import './Home.scss';
 
 function Home() {
   return (
     <main className='home container'>
       <h1>Aceso - App</h1>
       <p>Easy manage your journey and focus more on your nursing care.</p>
-      <Link to='/register'>Get Started</Link>
-      <div>
-        Already have an account ?<Link to='/login'>Login</Link>
+      <Link className='btn-link' to='/register'>
+        Get Started
+      </Link>
+      <div className='home_footer'>
+        <p>
+          Already have an account ?<Link to='/login'>Login</Link>
+        </p>
       </div>
     </main>
   );
