@@ -1,0 +1,17 @@
+@use '../../../assets/styles/variables';
+@use '../../../assets/styles/colors';
+@use '../../../assets/styles/functions';
+
+.label {
+  color: colors.$dark-300;
+  padding-bottom: functions.space(0.5);
+}
+.label-small {
+  font-size: variables.$small-label;
+}
+.label-medium {
+  font-size: variables.$medium-label;
+}
+.label-large {
+  font-size: variables.$large-label;
+}

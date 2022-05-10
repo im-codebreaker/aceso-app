@@ -1,0 +1,7 @@
+@use '../../../assets/styles/variables';
+@use '../../../assets/styles/colors';
+@use '../../../assets/styles/functions';
+
+.form-footer {
+  margin-top: functions.space(4);
+}

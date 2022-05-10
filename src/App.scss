@@ -53,14 +53,3 @@ a {
   width: 80vw;
   margin-inline: auto;
 }
-.btn-link {
-  display: inline-block;
-  width: 100%;
-  padding: functions.space(1) functions.space(2);
-  color: colors.$light-900;
-  background-color: colors.$primary;
-  border-radius: 2px;
-  font-family: contentSemiBold;
-  text-align: center;
-  text-transform: uppercase;
-}

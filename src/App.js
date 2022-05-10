@@ -1,26 +1,27 @@
 import './App.scss';
 import * as React from 'react';
 import {
-  Header,
   Home,
-  Footer,
   LogInForm,
-  RequestPasswordForm,
-  ResetPasswordConfirmation,
   SignUpForm,
+  RequestPasswordForm,
   ResetPasswordForm,
-  Dashboard,
   RequestPasswordConfirmation,
-} from 'components';
+  ResetPasswordConfirmation,
+} from 'components/connexion';
+import {
+  DashBoard,
+  DashBoardHelp,
+  DashBoardSettings,
+} from 'components/dashboard';
+import { PrivateRoute } from 'routes/PrivateRoute';
 import { Routes, Route } from 'react-router-dom';
 import AuthProvider from 'context/Auth';
 
 function App() {
-  const user = false;
   return (
     <>
       <AuthProvider>
-        <Header />
         <Routes>
           <Route index element={<Home />} />
           <Route path='login' element={<LogInForm />} />
@@ -39,10 +40,13 @@ function App() {
               element={<ResetPasswordConfirmation />}
             />
           </Route>
-          <Route path='dashboard' element={<Dashboard user={user} />} />
+          <Route path='dashboard' element={<PrivateRoute />}>
+            <Route index element={<DashBoard />} />
+            <Route path='help' element={<DashBoardHelp />} />
+            <Route path='settings' element={<DashBoardSettings />} />
+          </Route>
           <Route path='*' element={<p>There's nothing here ! 404</p>} />
         </Routes>
-        <Footer />
       </AuthProvider>
     </>
   );

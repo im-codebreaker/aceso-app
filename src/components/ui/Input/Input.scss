@@ -1,0 +1,29 @@
+@use '../../../assets/styles/variables';
+@use '../../../assets/styles/colors';
+@use '../../../assets/styles/functions';
+
+.form-control {
+  &:focus,
+  &:focus-within,
+  &:focus-visible {
+    border-color: colors.$primary-lighter;
+  }
+  &:focus-within::placeholder {
+    opacity: 0;
+  }
+  &::placeholder {
+    color: colors.$dark-100;
+    font-size: 0.825rem;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: colors.$light-700;
+  }
+  &:invalid {
+    border-color: pink;
+  }
+  outline: none;
+  padding: functions.space(0.5) functions.space(2);
+  border: 1px solid colors.$light-100;
+  border-radius: 2px;
+}

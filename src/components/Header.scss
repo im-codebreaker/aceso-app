@@ -1,7 +1,0 @@
-@use '../assets/styles/functions';
-@use '../assets/styles/variables';
-
-.header {
-  padding: functions.space(3);
-  max-height: variables.$header-height;
-}

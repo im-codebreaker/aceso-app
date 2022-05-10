@@ -1,0 +1,85 @@
+@use '../../../assets/styles/variables';
+@use '../../../assets/styles/colors';
+@use '../../../assets/styles/functions';
+
+.btn {
+  &:disabled {
+    cursor: not-allowed;
+    background-color: colors.$light-300;
+  }
+  cursor: pointer;
+  padding: functions.space(1) functions.space(2);
+  border: none;
+  border-radius: 2px;
+  font-family: contentSemiBold;
+  text-transform: uppercase;
+  color: colors.$light-000;
+  transition: all 400ms linear;
+}
+.btn-fw {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+.btn-primary {
+  &:hover:not(:disabled) {
+    background-color: colors.$primary-lighter;
+  }
+  &:active:not(:disabled) {
+    background-color: colors.$primary-darker;
+  }
+  &:focus:not(:disabled) {
+    outline: 3px solid colors.$primary-focus;
+  }
+  background-color: colors.$primary;
+}
+.btn-secondary {
+  &:hover:not(:disabled) {
+    background-color: colors.$secondary-lighter;
+  }
+  &:active:not(:disabled) {
+    background-color: colors.$secondary-darker;
+  }
+  &:focus:not(:disabled) {
+    outline: 3px solid colors.$secondary-focus;
+  }
+  background-color: colors.$secondary;
+}
+.btn-outlined {
+  &:disabled {
+    color: colors.$light-000;
+    border: none;
+  }
+  &:hover:not(:disabled) {
+    background-color: colors.$primary-outline-hover;
+  }
+  &:focus:not(:disabled) {
+    outline: 3px solid colors.$primary-focus;
+  }
+  border: 1px solid colors.$primary-lighter;
+  color: colors.$primary-lighter;
+  background-color: transparent;
+}
+.btn-ghost {
+  &:disabled {
+    color: colors.$dark-300;
+    background: none;
+  }
+  &:hover:not(:disabled) {
+    color: colors.$primary-lighter;
+  }
+  &:focus:not(:disabled) {
+    outline: 3px solid colors.$primary-focus;
+  }
+  color: colors.$primary;
+  background: none;
+}
+.btn-small {
+  font-size: variables.$small-label;
+}
+.btn-medium {
+  font-size: variables.$medium-label;
+}
+.btn-large {
+  font-size: variables.$large-label;
+}
