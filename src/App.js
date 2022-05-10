@@ -6,9 +6,11 @@ import {
   Footer,
   LogInForm,
   RequestPasswordForm,
+  ResetPasswordConfirmation,
   SignUpForm,
   ResetPasswordForm,
   Dashboard,
+  RequestPasswordConfirmation,
 } from 'components';
 import { Routes, Route } from 'react-router-dom';
 import AuthProvider from 'context/Auth';
@@ -23,8 +25,20 @@ function App() {
           <Route index element={<Home />} />
           <Route path='login' element={<LogInForm />} />
           <Route path='register' element={<SignUpForm />} />
-          <Route path='request-password' element={<RequestPasswordForm />} />
-          <Route path='reset-password' element={<ResetPasswordForm />} />
+          <Route path='request-password'>
+            <Route index element={<RequestPasswordForm />} />
+            <Route
+              path='confirmation'
+              element={<RequestPasswordConfirmation />}
+            />
+          </Route>
+          <Route path='reset-password'>
+            <Route index element={<ResetPasswordForm />} />
+            <Route
+              path='confirmation'
+              element={<ResetPasswordConfirmation />}
+            />
+          </Route>
           <Route path='dashboard' element={<Dashboard user={user} />} />
           <Route path='*' element={<p>There's nothing here ! 404</p>} />
         </Routes>

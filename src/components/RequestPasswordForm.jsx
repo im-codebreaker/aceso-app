@@ -8,17 +8,20 @@ import FormHeading from './FormHeading';
 import Button from './Button';
 import Alert from './Alert';
 import { useAuth } from 'context/Auth';
+import { useNavigate } from 'react-router-dom';
 
 function RequestPasswordForm() {
   const [hasError, setHasError] = React.useState(null);
 
   const methods = useForm();
-
   const { resetPassword } = useAuth();
+  const navigate = useNavigate();
 
   const onSubmit = async ({ email }) => {
     const { error } = await resetPassword(email);
     if (error) setHasError(error.message);
+
+    setTimeout(() => navigate('/request-password-confirmation'));
   };
   return (
     <main className='container'>
