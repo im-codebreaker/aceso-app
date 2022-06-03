@@ -1,0 +1,60 @@
+@use './assets/styles/colors';
+@use './assets/styles/functions';
+@use './assets/styles/variables';
+
+.settings_title{
+  font-family: contentRegular;
+  font-weight: 400;
+  font-size:variables.$body;
+  color:colors.$dark-300;
+  border-bottom: 1px solid colors.$light-500;
+}
+.section_settings{
+  margin-top: 40px;
+  @media screen and (min-width:64em) {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+  }
+}
+.section_settings-infos,
+.section_settings-delete{
+  margin:5rem 0;
+  @media screen and (min-width:64em) {
+    margin: 0;
+  }
+}
+.form_update-infos,
+.form_update-password,
+.settings_delete-message{
+  margin-top: 1rem;
+}
+.section_settings-infos{
+  @media screen and (min-width:64em) {
+    grid-row: 1 / span 2;
+  }  
+}
+.section_settings-delete{
+  @media screen and (min-width:64em) {
+    grid-column: 2 / 3;  
+    align-self: end;
+  
+  }  
+}
+.settings_delete-message{
+  margin-bottom: 2rem;
+  font-size:variables.$body-small;
+}
+.group-row{
+  @media screen and (min-width:64em) {
+    display:flex;
+    flex-direction: row;
+    gap:8px;
+  }
+}
+.group-row div{
+  @media screen and (min-width:64em) {
+    flex:1;
+  }
+}
