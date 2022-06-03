@@ -5,7 +5,7 @@ function Icon({ className = '', name, size = 'large', style = 'line' }) {
   return (
     <i
       className={`icon-ri ri-${name}-${style} ${size} ${className}`.trim()}
-    ></i>
+     aria-hidden="true"></i>
   );
 }
 

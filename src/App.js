@@ -10,9 +10,7 @@ import {
   ResetPasswordConfirmation,
 } from 'components/connexion';
 import {
-  DashBoard,
-  DashBoardHelp,
-  DashBoardSettings,
+  CareList, Organization, Overview, PatientList, Settings
 } from 'components/dashboard';
 import { PrivateRoute } from 'routes/PrivateRoute';
 import { Routes, Route } from 'react-router-dom';
@@ -41,9 +39,11 @@ function App() {
             />
           </Route>
           <Route path='dashboard' element={<PrivateRoute />}>
-            <Route index element={<DashBoard />} />
-            <Route path='help' element={<DashBoardHelp />} />
-            <Route path='settings' element={<DashBoardSettings />} />
+           <Route index element={<Overview/>} />
+           <Route path="patient-list" element={<PatientList/>} />
+           <Route path="care-list" element={<CareList/>} />
+           <Route path="organization" element={<Organization/>} />
+           <Route path="settings" element={<Settings/>} />
           </Route>
           <Route path='*' element={<p>There's nothing here ! 404</p>} />
         </Routes>
