@@ -1,7 +1,33 @@
+@charset 'utf-8';
+
+/*------------------------------------*\
+  #USE FILES
+\*------------------------------------*/
+
 @use './assets/styles/colors';
 @use './assets/styles/functions';
 @use './assets/styles/variables';
 
+/*------------------------------------*\
+  #GLOBAL
+\*------------------------------------*/
+
+$textColor: var(--text-color);
+$titleColor: var(--title-color);
+$backgroundColor: var(--background-color);
+
+:root{
+  --text-color: hsl(240, 22%, 52%);
+  --title-color: hsl(241, 100%, 66%);
+  --label-color:hsl(240, 32%, 70%);
+  --background-color:hsl(0, 0%, 100%);
+}
+html[data-theme='dark']{
+  --text-color: hsl(240, 47%, 97%);
+  --title-color: hsl(241, 98%, 70%);
+  --label-color:hsl(240, 42%, 95%);
+  --background-color: hsl(241, 39%, 22%);
+}
 h1,
 h2,
 h3,
@@ -9,7 +35,7 @@ h4,
 h5,
 h6 {
   font-family: titleBold;
-  color: colors.$primary;
+  color: $titleColor;
 }
 h1 {
   font-size: variables.$heading-1;
@@ -34,8 +60,8 @@ p {
 }
 body {
   font-family: contentRegular;
-  color: colors.$dark-500;
-  background-color: colors.$light-000;
+  color: $textColor;
+  background-color: $backgroundColor;
 }
 a {
   font-size: variables.$medium-label;

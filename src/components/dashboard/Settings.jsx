@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
-import { SettingsPersonnalInformation } from './SettingsPersonnalInformation';
-import { SettingsPasswordUpdate } from './SettingsPasswordUpdate';
+import { SettingsManageInformation } from './SettingsManageInformation';
+import { SettingsManagePassword } from './SettingsManagePassword';
 import { SettingsAccountDelete } from './SettingsAccountDelete';
+import { SettingsManageTheme} from './SettingsManageTheme';
 import './Settings.scss';
 
 function Settings() {
@@ -12,8 +13,9 @@ function Settings() {
       <h1>Settings</h1>
       <section className="section_settings">
       <FormProvider {...methods}>
-        <SettingsPersonnalInformation handleSubmit={methods.handleSubmit}/>
-        <SettingsPasswordUpdate handleSubmit={methods.handleSubmit}/>
+        <SettingsManageInformation handleSubmit={methods.handleSubmit}/>
+        <SettingsManageTheme handleSubmit={methods.handleSubmit} />
+        <SettingsManagePassword handleSubmit={methods.handleSubmit}/>
         <SettingsAccountDelete />
       </FormProvider>
       </section>

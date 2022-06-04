@@ -8,3 +8,4 @@ export * from './Forms/FormHeading';
 export * from './Icon/Icon';
 export * from './Input/Input';
 export * from './Label/Label';
+export * from './Radio/Radio';

@@ -3,7 +3,7 @@
 @use '../../../assets/styles/functions';
 
 .label {
-  color: colors.$dark-300;
+  color: var(--label-color);
   padding-bottom: functions.space(0.5);
 }
 .label-small {

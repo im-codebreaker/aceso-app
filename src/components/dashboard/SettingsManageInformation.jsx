@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Button, Form, FormGroup, Icon, Input, Label } from 'components/ui';
 import './Settings.scss';
 
-function SettingsPersonnalInformation({ handleSubmit }) {
+function SettingsManageInformation({ handleSubmit }) {
   function onSubmit({ lastName, firstName, email, phone, address, zup, city }) {
     console.log(lastName, firstName, email, phone, address, zup, city);
   }
@@ -52,4 +52,4 @@ function SettingsPersonnalInformation({ handleSubmit }) {
   );
 }
 
-export { SettingsPersonnalInformation };
+export { SettingsManageInformation };

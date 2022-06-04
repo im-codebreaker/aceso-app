@@ -22,6 +22,7 @@
   &:invalid {
     border-color: pink;
   }
+  background: none;
   outline: none;
   padding: functions.space(0.5) functions.space(2);
   border: 1px solid colors.$light-100;

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Button, Form, FormGroup, Icon, Input, Label } from 'components/ui';
 import './Settings.scss';
 
-function SettingsPasswordUpdate({handleSubmit}) {
+function SettingsManagePassword({handleSubmit}) {
  
   function onSubmit({password, passwordConfirmation}) {
     console.log(password, passwordConfirmation);
@@ -31,4 +31,4 @@ function SettingsPasswordUpdate({handleSubmit}) {
   );
 }
 
-export { SettingsPasswordUpdate };
+export { SettingsManagePassword };

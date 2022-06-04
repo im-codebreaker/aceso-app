@@ -6,7 +6,7 @@
   font-family: contentRegular;
   font-weight: 400;
   font-size:variables.$body;
-  color:colors.$dark-300;
+  color:var(--label-color);
   border-bottom: 1px solid colors.$light-500;
 }
 .section_settings{
@@ -14,7 +14,6 @@
   @media screen and (min-width:64em) {
     display:grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     gap: 40px;
   }
 }
@@ -27,7 +26,8 @@
 }
 .form_update-infos,
 .form_update-password,
-.settings_delete-message{
+.settings_delete-message,
+.settings_controls-wrapper{
   margin-top: 1rem;
 }
 .section_settings-infos{
@@ -45,6 +45,14 @@
 .settings_delete-message{
   margin-bottom: 2rem;
   font-size:variables.$body-small;
+}
+.settings_controls-wrapper{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.settings_controls{
+  flex:1;
 }
 .group-row{
   @media screen and (min-width:64em) {
