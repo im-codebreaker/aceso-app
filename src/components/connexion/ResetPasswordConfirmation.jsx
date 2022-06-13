@@ -12,7 +12,7 @@ function ResetPasswordConfirmation() {
             Aceso with your new credentials.
           </p>
           <img src='https://via.placeholder.com/360' alt='' />
-          <Link to='login'>Login</Link>
+          <Link to='/login'>Login</Link>
         </section>
       </main>
     </main>

@@ -9,3 +9,4 @@ export * from './Icon/Icon';
 export * from './Input/Input';
 export * from './Label/Label';
 export * from './Radio/Radio';
+export * from './SearchInput/SearchInput';

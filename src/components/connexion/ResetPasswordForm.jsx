@@ -9,6 +9,7 @@ import {
   Label,
 } from 'components/ui';
 import { useAuth } from 'context/Auth';
+import { useNavigate } from 'react-router-dom';
 import { useForm, FormProvider } from 'react-hook-form';
 
 function ResetPasswordForm() {
@@ -17,11 +18,13 @@ function ResetPasswordForm() {
     user: { email },
     updateUser,
   } = useAuth();
+  const navigate = useNavigate();
   const [hasError, setHasError] = React.useState(null);
+
   const onSubmit = async ({ password, passwordConfirmation }) => {
     if (password === passwordConfirmation) {
       const { error } = await updateUser({ email, password });
-      console.log(error);
+      setTimeout(() => navigate('confirmation'));
     } else {
       setHasError({ message: 'Both passwords must match together.' });
     }

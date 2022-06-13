@@ -75,7 +75,7 @@ function LogInForm() {
             Continue
           </Button>
           <FormFooter>
-            Don't have an account ? <Link to='/register'>Register</Link>
+            <p>Don't have an account ? <Link to='/register'>Register</Link></p>
           </FormFooter>
         </Form>
       </FormProvider>

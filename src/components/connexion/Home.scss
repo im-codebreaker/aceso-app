@@ -1,11 +1,10 @@
 @use '../../assets/styles/functions';
-@use '../../assets/styles/variables';
 
 .home {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: calc(100vh - (variables.$header-height + variables.$footer-height));
+  height: 100vh ;
   padding-bottom: functions.space(4);
   p {
     padding-bottom: functions.space(8);

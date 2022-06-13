@@ -23,7 +23,7 @@ function RequestPasswordForm() {
     const { error } = await resetPassword(email);
     if (error) setHasError(error.message);
 
-    setTimeout(() => navigate('/request-password-confirmation'));
+    setTimeout(() => navigate('confirmation'));
   };
   return (
     <main className='container'>

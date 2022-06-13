@@ -1,5 +1,4 @@
 @use '../../../assets/styles/variables';
-@use '../../../assets/styles/colors';
 @use '../../../assets/styles/functions';
 
 .alert {
@@ -20,18 +19,18 @@
   background: none;
 }
 .alert-error {
-  color: colors.$status-error-700;
-  background-color: colors.$status-error-100;
+  color: variables.$error1;
+  background-color: variables.$error4;
 }
 .alert-information {
-  color: colors.$status-information-700;
-  background-color: colors.$status-information-100;
+  color: variables.$information1;
+  background-color: variables.$information4;
 }
 .alert-success {
-  color: colors.$status-success-900;
-  background-color: colors.$status-success-100;
+  color: variables.$success0;
+  background-color: variables.$success4;
 }
 .alert-warning {
-  color: colors.$status-warning-900;
-  background-color: colors.$status-warning-100;
+  color: variables.$warning0;
+  background-color: variables.$warning4;
 }

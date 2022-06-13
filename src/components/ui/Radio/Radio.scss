@@ -1,6 +1,4 @@
 @use '../../../assets/styles/variables';
-@use '../../../assets/styles/colors';
-@use '../../../assets/styles/functions';
 
 .radio{
   &::before{
@@ -13,13 +11,13 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     border-radius: 50%;
-    background-color: colors.$primary;
+    background-color: variables.$primary;
   }
   &:checked::before{
     opacity: 1;
   }
   &:disabled{
-    background-color: colors.$light-300;
+    background-color: variables.$light2;
   }
 
   appearance: none;
@@ -28,5 +26,5 @@
   height: 1rem;
   border-radius: 50%;
   margin-right: .5rem;
-  border: 1px solid colors.$light-100;
+  border: 1px solid variables.$light1;
 }

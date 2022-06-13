@@ -1,11 +1,10 @@
 @use '../../../assets/styles/variables';
-@use '../../../assets/styles/colors';
 @use '../../../assets/styles/functions';
 
 .btn {
   &:disabled {
     cursor: not-allowed;
-    background-color: colors.$light-300;
+    background-color: variables.$light2;
   }
   cursor: pointer;
   padding: functions.space(1) functions.space(2);
@@ -13,7 +12,7 @@
   border-radius: 2px;
   font-family: contentSemiBold;
   text-transform: uppercase;
-  color: colors.$light-000;
+  color: variables.$light0;
   transition: all 400ms linear;
 }
 .btn-fw {
@@ -23,63 +22,63 @@
 }
 .btn-primary {
   &:hover:not(:disabled) {
-    background-color: colors.$primary-lighter;
+    background-color: variables.$primaryLighter;
   }
   &:active:not(:disabled) {
-    background-color: colors.$primary-darker;
+    background-color: variables.$primaryDarker;
   }
   &:focus:not(:disabled) {
-    outline: 3px solid colors.$primary-focus;
+    outline: 3px solid variables.$primaryFocus;
   }
-  background-color: colors.$primary;
+  background-color: variables.$primary;
 }
 .btn-secondary {
   &:hover:not(:disabled) {
-    background-color: colors.$secondary-lighter;
+    background-color: variables.$secondaryLighter;
   }
   &:active:not(:disabled) {
-    background-color: colors.$secondary-darker;
+    background-color: variables.$secondaryDarker;
   }
   &:focus:not(:disabled) {
-    outline: 3px solid colors.$secondary-focus;
+    outline: 3px solid variables.$secondaryFocus;
   }
-  background-color: colors.$secondary;
+  background-color: variables.$secondary;
 }
 .btn-outlined {
   &:disabled {
-    color: colors.$light-000;
+    color: variables.$light0;
     border: none;
   }
   &:hover:not(:disabled) {
-    background-color: colors.$primary-outline-hover;
+    background-color: variables.$primaryOutlineHover;
   }
   &:focus:not(:disabled) {
-    outline: 3px solid colors.$primary-focus;
+    outline: 3px solid variables.$primaryFocus;
   }
-  border: 1px solid colors.$primary-lighter;
-  color: colors.$primary-lighter;
+  border: 1px solid variables.$primaryLighter;
+  color: variables.$primaryLighter;
   background-color: transparent;
 }
 .btn-ghost {
   &:disabled {
-    color: colors.$dark-300;
+    color: variables.$dark2;
     background: none;
   }
   &:hover:not(:disabled) {
-    color: colors.$primary-lighter;
+    color: variables.$primaryLighter;
   }
   &:focus:not(:disabled) {
-    outline: 3px solid colors.$primary-focus;
+    outline: 3px solid variables.$primaryFocus;
   }
-  color: colors.$primary;
+  color: variables.$primary;
   background: none;
 }
 .btn-small {
-  font-size: variables.$small-label;
+  font-size: variables.$labelSmall;
 }
 .btn-medium {
-  font-size: variables.$medium-label;
+  font-size: variables.$labelMedium;
 }
 .btn-large {
-  font-size: variables.$large-label;
+  font-size: variables.$labelLarge;
 }

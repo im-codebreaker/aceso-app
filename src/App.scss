@@ -4,7 +4,6 @@
   #USE FILES
 \*------------------------------------*/
 
-@use './assets/styles/colors';
 @use './assets/styles/functions';
 @use './assets/styles/variables';
 
@@ -12,21 +11,35 @@
   #GLOBAL
 \*------------------------------------*/
 
-$textColor: var(--text-color);
-$titleColor: var(--title-color);
-$backgroundColor: var(--background-color);
-
-:root{
-  --text-color: hsl(240, 22%, 52%);
-  --title-color: hsl(241, 100%, 66%);
-  --label-color:hsl(240, 32%, 70%);
-  --background-color:hsl(0, 0%, 100%);
+:root {
+  --text-color: #{variables.$dark1};
+  --title-color: #{variables.$primary};
+  --label-color: #{variables.$dark3};
+  --placeholder-color: #{variables.$dark4};
+  --link-color: #{variables.$primary};
+  --menu-background: #{variables.$primary};
+  --background-color: #{variables.$light0};
+  --elevation0: #{variables.$elevationLight0};
+  --elevation1: #{variables.$elevationLight1};
+  --elevation2: #{variables.$elevationLight2};
+  --elevation3: #{variables.$elevationLight3};
+  --elevation4: #{variables.$elevationLight4};
+  --elevation5: #{variables.$elevationLight5};
 }
-html[data-theme='dark']{
-  --text-color: hsl(240, 47%, 97%);
-  --title-color: hsl(241, 98%, 70%);
-  --label-color:hsl(240, 42%, 95%);
-  --background-color: hsl(241, 39%, 22%);
+html[data-theme='dark'] {
+  --text-color: #{variables.$light1};
+  --title-color: #{variables.$primaryLighter};
+  --label-color: #{variables.$light3};
+  --placeholder-color: #{variables.$light4};
+  --link-color: #{variables.$primaryLighter};
+  --menu-background: #{variables.$primaryLighter};
+  --background-color: #{variables.$dark0};
+  --elevation0: #{variables.$elevationDark0};
+  --elevation1: #{variables.$elevationDark1};
+  --elevation2: #{variables.$elevationDark2};
+  --elevation3: #{variables.$elevationDark3};
+  --elevation4: #{variables.$elevationDark4};
+  --elevation5: #{variables.$elevationDark5};
 }
 h1,
 h2,
@@ -35,37 +48,37 @@ h4,
 h5,
 h6 {
   font-family: titleBold;
-  color: $titleColor;
+  color: var(--title-color);
 }
 h1 {
-  font-size: variables.$heading-1;
+  font-size: variables.$heading1;
 }
 h2 {
-  font-size: variables.$heading-2;
+  font-size: variables.$heading2;
 }
 h3 {
-  font-size: variables.$heading-3;
+  font-size: variables.$heading3;
 }
 h4 {
-  font-size: variables.$heading-4;
+  font-size: variables.$heading4;
 }
 h5 {
-  font-size: variables.$heading-5;
+  font-size: variables.$heading5;
 }
 h6 {
-  font-size: variables.$heading-6;
+  font-size: variables.$heading6;
 }
 p {
-  font-size: variables.$body-small;
+  font-size: variables.$bodySmall;
 }
 body {
   font-family: contentRegular;
-  color: $textColor;
-  background-color: $backgroundColor;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 a {
-  font-size: variables.$medium-label;
-  color: colors.$primary;
+  font-size: variables.$labelMedium;
+  color: var(--link-color);
   font-family: contentRegular;
 }
 .App {

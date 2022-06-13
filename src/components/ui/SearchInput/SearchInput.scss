@@ -1,0 +1,12 @@
+.search_group{
+  position: relative;
+}
+.input_search{
+  width: 100%;
+}
+.icon_search{
+  position: absolute;
+  top:calc(50% - 10.5px);
+  left: calc(100% - (16px + 14px));
+  color:var(--label-color);
+}

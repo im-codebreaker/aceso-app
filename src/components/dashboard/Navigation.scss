@@ -1,4 +1,4 @@
-@use './assets/styles/colors';
+@use './assets/styles/variables';
 
 .header{
   display:flex;
@@ -6,24 +6,21 @@
   align-items: center;
   justify-content: space-between;
   padding: .5rem;
-  color:colors.$light-100;
-
   @media screen and (min-width: 64em) {
     position:fixed;
     top:0; 
     left: 0;
     height: 100%;
     flex-direction: column;
-    background-color: colors.$primary;
+    background-color: var(--menu-background);
   }
 }
 .header_navbar{
   position: fixed;
-  background-color: colors.$primary;
   bottom: 0;
   left: 0;
   width: 100%;
-
+  background-color: var(--menu-background);
   @media screen and (min-width: 64em) {
    position: static;
    width: auto;
@@ -42,17 +39,16 @@
   }
 }
 .navbar_links a {
-  color:colors.$light-100;
+  color:variables.$light0;
 }
 .logo{
-  color:colors.$primary;
-
+  fill: variables.$primary;
   @media screen and (min-width: 64em) {
-    color:colors.$light-100;
+    fill: variables.$light0;
    }
 }
 .logout{
   @media screen and (min-width: 64em) {
-    color:colors.$light-100;
+    color:variables.$light0;
    }
 }

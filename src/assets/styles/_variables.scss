@@ -1,20 +1,90 @@
-$header-height: 80px;
-$footer-height: 56px;
-
 /*------------------------------------*\
-  Typography
+  #TYPOGRAPHY
 \*------------------------------------*/
 
-$heading-1: clamp(1.875rem, 3vw + 1rem, 2.5rem);
-$heading-2: clamp(1.75rem, 3vw + 1rem, 2rem);
-$heading-3: clamp(1.5rem, 3vw + 1rem, 1.75rem);
-$heading-4: clamp(1.25rem, 3vw + 1rem, 1.5rem);
-$heading-5: clamp(1rem, 3vw + 1rem, 1.25rem);
-$heading-6: clamp(0.875rem, 3vw + 1rem, 1rem);
+$heading1: clamp(1.875rem, 3vw + 1rem, 2.5rem);
+$heading2: clamp(1.75rem, 3vw + 1rem, 2rem);
+$heading3: clamp(1.5rem, 3vw + 1rem, 1.75rem);
+$heading4: clamp(1.25rem, 3vw + 1rem, 1.5rem);
+$heading5: clamp(1rem, 3vw + 1rem, 1.25rem);
+$heading6: clamp(0.875rem, 3vw + 1rem, 1rem);
 
 $body: 1rem;
-$body-small: 0.875rem;
+$bodySmall:.875rem;
 
-$small-label: 0.625rem;
-$medium-label: 0.75rem;
-$large-label: 0.875rem;
+$labelSmall: 0.625rem;
+$labelMedium: 0.75rem;
+$labelLarge: 0.875rem;
+
+/*------------------------------------*\
+  #COLOR SCHEME
+\*------------------------------------*/
+
+$primary: hsl(241, 100%, 66%);
+$primaryDarker: hsl(241, 73%, 56%);
+$primaryLighter: hsl(241, 98%, 70%);
+$primaryFocus: hsla(241, 98%, 70%, 50%);
+$primaryOutlineHover: hsla(241, 98%, 70%, 10%);
+
+$secondary: hsl(331, 98%, 62%);
+$secondaryDarker: hsl(331, 73%, 52%);
+$secondaryLighter: hsl(331, 94%, 66%);
+$secondaryFocus: hsla(331, 94%, 66%, 50%);
+
+$light0:hsl(0, 0%, 100%);
+$light1:hsl(240, 56%, 98%);
+$light2:hsl(240, 47%, 97%);
+$light3:hsl(240, 42%, 95%);
+$light4:hsl(240, 39%, 93%);
+$light5:hsl(240, 28%, 90%);
+
+$dark0:hsl(241, 39%, 22%);
+$dark1:hsl(242, 22%, 32%);
+$dark2:hsl(240, 22%, 52%);
+$dark3:hsl(240, 32%, 70%);
+$dark4:hsl(240, 37%, 84%);
+$dark5:hsl(240, 46%, 89%);
+
+$error0: hsl(0, 63%, 31%);
+$error1: hsl(0, 74%, 42%);
+$error2: hsl(0, 84%, 60%);
+$error3: hsl(0, 94%, 82%);
+$error4: hsl(0, 100%, 96%);
+
+$information0: hsl(224, 64%, 33%);
+$information1: hsl(224, 76%, 48%);
+$information2: hsl(217, 91%, 60%);
+$information3: hsl(212, 96%, 78%);
+$information4: hsl(214, 95%, 93%);
+
+$success0: hsl(154, 95%, 25%);
+$success1: hsl(154, 94%, 39%);
+$success2: hsl(150, 68%, 54%);
+$success3: hsl(150, 79%, 63%);
+$success4: hsl(150, 100%, 95%);
+
+$warning0: hsl(48, 100%, 23%);
+$warning1: hsl(48, 100%, 50%);
+$warning2: hsl(49, 98%, 64%);
+$warning3: hsl(49, 98%, 64%);
+$warning4: hsl(55, 96%, 90%);
+
+/*------------------------------------*\
+  #ELEVATIONS
+\*------------------------------------*/
+
+$elevationLight0: inset 0px 0.5px 4px rgba(96, 97, 112, 0.32);
+$elevationLight1: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 2px 4px rgba(96, 97, 112, 0.16);
+$elevationLight2: 0px 0px 2px rgba(40, 41, 61, 0.04), 0px 4px 8px rgba(96, 97, 112, 0.16);
+$elevationLight3: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
+$elevationLight4: 0px 2px 8px rgba(40, 41, 61, 0.04), 0px 16px 24px rgba(96, 97, 112, 0.16);
+$elevationLight5: 0px 2px 8px rgba(40, 41, 61, 0.08), 0px 20px 32px rgba(96, 97, 112, 0.24);
+
+
+$elevationDark0: inset 0px 0.5px 4px rgba(0, 0, 0, 0.32);
+$elevationDark1: 0px 0px 1px rgba(40, 41, 61, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.32);
+$elevationDark2: 0px 0px 2px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.32);
+$elevationDark3: 0px 0px 2px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.32);
+$elevationDark4: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.32);
+$elevationDark5: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.32);
+

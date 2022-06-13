@@ -79,7 +79,7 @@ function SignUpForm() {
             Create Account
           </Button>
           <FormFooter>
-            Already have an account ? <Link to='/login'>Login</Link>
+            <p>Already have an account ? <Link to='/login'>Login</Link></p>
           </FormFooter>
         </Form>
       </FormProvider>

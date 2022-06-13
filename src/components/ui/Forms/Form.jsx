@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './Form.scss';
 
 function Form({ type, className = '', onSubmit, children }) {
   return (

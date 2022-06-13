@@ -1,0 +1,50 @@
+@use './assets/styles/variables';
+@use './assets/styles/functions';
+
+.administrative_file {
+  display: grid;
+  grid-template-areas:
+    'identity contact'
+    'history contact';
+  gap: 1rem;
+}
+.box_header {
+  padding: functions.space(1) functions.space(2);
+  border-radius: 4px;
+  background-color: var(--menu-background);
+}
+.box_header h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: contentRegular;
+  color: variables.$light0;
+}
+.box_content > * {
+  padding: functions.space(2);
+}
+.contact_phone {
+  display: flex;
+  justify-content: space-between;
+}
+.gender {
+  display: inline-block;
+  margin-left: auto;
+}
+.administrative_file-identity {
+  grid-area: identity;
+}
+.administrative_file-history {
+  grid-area: history;
+}
+.administrative_file-contact {
+  grid-area: contact;
+}
+.administrative_file-identity,
+.administrative_file-history,
+.administrative_file-contact {
+  padding: functions.space(1);
+  border-radius: 0.5rem;
+  min-height: 250px;
+  background-color: var(--background-color);
+  box-shadow: var(--elevation4);
+}

@@ -1,13 +1,12 @@
-@use './assets/styles/colors';
-@use './assets/styles/functions';
 @use './assets/styles/variables';
+@use './assets/styles/functions';
 
 .settings_title{
   font-family: contentRegular;
+  color:var(--label-color);
   font-weight: 400;
   font-size:variables.$body;
-  color:var(--label-color);
-  border-bottom: 1px solid colors.$light-500;
+  border-bottom: 1px solid variables.$light1;
 }
 .section_settings{
   margin-top: 40px;
@@ -43,8 +42,8 @@
   }  
 }
 .settings_delete-message{
+  color:var(--label-color);
   margin-bottom: 2rem;
-  font-size:variables.$body-small;
 }
 .settings_controls-wrapper{
   display:flex;
