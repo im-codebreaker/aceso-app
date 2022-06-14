@@ -27,8 +27,7 @@
   justify-content: space-between;
 }
 .gender {
-  display: inline-block;
-  margin-left: auto;
+  float: right;
 }
 .administrative_file-identity {
   grid-area: identity;
@@ -44,7 +43,30 @@
 .administrative_file-contact {
   padding: functions.space(1);
   border-radius: 0.5rem;
-  min-height: 250px;
   background-color: var(--background-color);
   box-shadow: var(--elevation4);
+}
+.box_content-fullname {
+  color: var(--title-color);
+  font-weight: 700;
+}
+.box_content-medical {
+  @media screen and (min-width: 64em) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.react-tabs__tab-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid variables.$light1;
+}
+.react-tabs__tab {
+  cursor: pointer;
+  color: var(--label-color);
+}
+.react-tabs__tab--selected {
+  border-bottom: 2px solid var(--menu-background);
 }
