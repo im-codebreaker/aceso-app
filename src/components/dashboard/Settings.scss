@@ -1,67 +1,55 @@
 @use './assets/styles/variables';
 @use './assets/styles/functions';
 
-.settings_title{
+.settings_title {
   font-family: contentRegular;
-  color:var(--label-color);
+  color: var(--label-color);
   font-weight: 400;
-  font-size:variables.$body;
+  font-size: variables.$body;
   border-bottom: 1px solid variables.$light1;
 }
-.section_settings{
-  margin-top: 40px;
-  @media screen and (min-width:64em) {
-    display:grid;
+.section_settings {
+  @media screen and (min-width: 64em) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
 }
 .section_settings-infos,
-.section_settings-delete{
-  margin:5rem 0;
-  @media screen and (min-width:64em) {
+.section_settings-theme,
+.section_settings-password,
+.section_settings-delete {
+  margin-top: 5rem;
+  @media screen and (min-width: 64em) {
     margin: 0;
   }
 }
 .form_update-infos,
 .form_update-password,
 .settings_delete-message,
-.settings_controls-wrapper{
+.settings_controls-wrapper {
   margin-top: 1rem;
 }
-.section_settings-infos{
-  @media screen and (min-width:64em) {
+.section_settings-infos {
+  @media screen and (min-width: 64em) {
     grid-row: 1 / span 2;
-  }  
+  }
 }
-.section_settings-delete{
-  @media screen and (min-width:64em) {
-    grid-column: 2 / 3;  
+.section_settings-delete {
+  @media screen and (min-width: 64em) {
+    grid-column: 2 / 3;
     align-self: end;
-  
-  }  
+  }
 }
-.settings_delete-message{
-  color:var(--label-color);
+.settings_delete-message {
+  color: var(--label-color);
   margin-bottom: 2rem;
 }
-.settings_controls-wrapper{
-  display:flex;
+.settings_controls-wrapper {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.settings_controls{
-  flex:1;
-}
-.group-row{
-  @media screen and (min-width:64em) {
-    display:flex;
-    flex-direction: row;
-    gap:8px;
-  }
-}
-.group-row div{
-  @media screen and (min-width:64em) {
-    flex:1;
-  }
+.settings_controls {
+  flex: 1;
 }

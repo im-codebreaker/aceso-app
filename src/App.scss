@@ -19,6 +19,7 @@
   --link-color: #{variables.$primary};
   --menu-background: #{variables.$primary};
   --background-color: #{variables.$light0};
+  --table-background-color: #{variables.$light1};
   --elevation0: #{variables.$elevationLight0};
   --elevation1: #{variables.$elevationLight1};
   --elevation2: #{variables.$elevationLight2};
@@ -34,6 +35,7 @@ html[data-theme='dark'] {
   --link-color: #{variables.$primaryLighter};
   --menu-background: #{variables.$primaryLighter};
   --background-color: #{variables.$dark0};
+  --table-background-color: #{variables.$dark1};
   --elevation0: #{variables.$elevationDark0};
   --elevation1: #{variables.$elevationDark1};
   --elevation2: #{variables.$elevationDark2};
@@ -81,6 +83,11 @@ a {
   color: var(--link-color);
   font-family: contentRegular;
 }
+section,
+form {
+  margin-top: functions.space(8);
+  padding-bottom: functions.space(20);
+}
 .App {
   display: flex;
   flex-direction: column;
@@ -92,6 +99,13 @@ a {
   width: 80vw;
   max-width: 1085px;
   margin-inline: auto;
+}
+.group-row {
+  @media screen and (min-width: 35em) {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
 }
 .visible-hidden {
   clip: rect(1px, 1px, 1px, 1px);

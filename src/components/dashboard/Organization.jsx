@@ -4,7 +4,7 @@ import './Organization.scss';
 function Organization() {
   return (
     <main className='container'>
-      <h1>My Organization</h1>
+      <h1>Mon cabinet infirmier</h1>
     </main>
   );
 }

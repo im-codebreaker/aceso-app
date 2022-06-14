@@ -4,7 +4,7 @@ import './CareList.scss';
 function CareList() {
   return (
     <main className='container'>
-      <h1>Care List</h1>
+      <h1>Liste des soins</h1>
     </main>
   );
 }

@@ -4,7 +4,7 @@ import './Overview.scss';
 function Overview() {
   return (
     <main className='container'>
-      <h1>Overview</h1>
+      <h1>Tableau de bord</h1>
     </main>
   );
 }

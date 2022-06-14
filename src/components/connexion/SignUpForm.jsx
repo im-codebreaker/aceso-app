@@ -46,17 +46,17 @@ function SignUpForm() {
       <FormProvider {...methods}>
         <Form type='signup' onSubmit={methods.handleSubmit(onSubmit)}>
           <FormHeading>
-            <h2>Create your Aceso account</h2>
-            <p>Join us and create an account now.</p>
+            <h2>Créez votre compte Aceso</h2>
+            <p>Rejoignez-nous et créez un compte dès maintenant.</p>
           </FormHeading>
           <FormGroup className='form-group_row'>
             <div className='group-row_item'>
-              <Label>First Name</Label>
-              <Input name='fullname' placeholder='Jane' />
+              <Label>Nom</Label>
+              <Input name='lastName' placeholder='Jane' />
             </div>
             <div className='group-row_item'>
-              <Label>Last Name</Label>
-              <Input name='fullname' placeholder='Doe' />
+              <Label>Prénom</Label>
+              <Input name='firstName' placeholder='Doe' />
             </div>
           </FormGroup>
           <FormGroup>
@@ -65,21 +65,24 @@ function SignUpForm() {
           </FormGroup>
           <FormGroup>
             <Label>Email</Label>
-            <Input name='email' type='email' placeholder='Jane.D@gmail.com' />
+            <Input name='email' type='email' placeholder='jane.doe@gmail.com' />
           </FormGroup>
           <FormGroup>
-            <Label>Password</Label>
+            <Label>Mot de passe</Label>
             <Input name='password' type='password' placeholder='************' />
           </FormGroup>
           <p>
-            By creating a new account,you're agree to our Terms & Conditions and
-            Privacy Policy
+            En créant un nouveau compte, vous acceptez les conditions générales
+            et la politique de confidentialité d'Aceso.
           </p>
           <Button type='submit' variant='primary' fullWidth>
-            Create Account
+            Créer un compte
           </Button>
           <FormFooter>
-            <p>Already have an account ? <Link to='/login'>Login</Link></p>
+            <p>
+              Vous disposez déjà d'un compte ?{' '}
+              <Link to='/login'>Se connecter</Link>
+            </p>
           </FormFooter>
         </Form>
       </FormProvider>

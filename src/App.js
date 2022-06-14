@@ -10,6 +10,7 @@ import {
   ResetPasswordConfirmation,
 } from 'components/connexion';
 import {
+  AddNewPatient,
   CareList,
   Organization,
   Overview,
@@ -50,6 +51,7 @@ function App() {
               path='patient-record/:patientId'
               element={<PatientRecord />}
             />
+            <Route path='add-new-patient' element={<AddNewPatient />} />
             <Route path='care-list' element={<CareList />} />
             <Route path='organization' element={<Organization />} />
             <Route path='settings' element={<Settings />} />

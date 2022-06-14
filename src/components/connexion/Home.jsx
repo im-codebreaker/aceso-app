@@ -7,13 +7,16 @@ function Home() {
   return (
     <main className='home container'>
       <h1>Aceso - App</h1>
-      <p>Easy manage your journey and focus more on your nursing care.</p>
+      <p>
+        Gérez facilement vos tournées et concentrez-vous d'avantage sur vos
+        soins infirmiers.
+      </p>
       <ButtonLink hRef='/register' fullWidth>
-        Get Started
+        Commencer
       </ButtonLink>
       <div className='home_footer'>
         <p>
-          Already have an account ?<Link to='/login'>Login</Link>
+          Vous disposez déjà d'un compte ? <Link to='/login'>Se connecter</Link>
         </p>
       </div>
     </main>

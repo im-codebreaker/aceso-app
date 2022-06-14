@@ -1,5 +1,13 @@
 import * as React from 'react';
-import { Button, Form, FormGroup, Icon, Input, Label } from 'components/ui';
+import {
+  Button,
+  Form,
+  FormGroup,
+  FormTitle,
+  Icon,
+  Input,
+  Label,
+} from 'components/ui';
 import './Settings.scss';
 
 function SettingsManageInformation({ handleSubmit }) {
@@ -9,19 +17,19 @@ function SettingsManageInformation({ handleSubmit }) {
 
   return (
     <div className='section_settings-infos'>
-      <h2 className='settings_title'>
+      <FormTitle>
         <Icon name='user' />
-        My personal information
-      </h2>
+        Mes informations personnelles
+      </FormTitle>
       <Form type='update-infos' onSubmit={handleSubmit(onSubmit)}>
         <div className='group-row'>
           <FormGroup>
-            <Label>Last name</Label>
+            <Label>Nom</Label>
             <Input name='lastName' placeholder='Doe' />
           </FormGroup>
           <FormGroup>
-            <Label>First name</Label>
-            <Input name='firstName' placeholder='Doe' />
+            <Label>Prénom</Label>
+            <Input name='firstName' placeholder='John' />
           </FormGroup>
         </div>
         <div className='group-row'>
@@ -30,23 +38,29 @@ function SettingsManageInformation({ handleSubmit }) {
             <Input name='email' placeholder='john.doe@mail.com' />
           </FormGroup>
           <FormGroup>
-            <Label>Phone</Label>
+            <Label>Téléphone</Label>
             <Input name='phone' placeholder='06.68.54.56.21' />
           </FormGroup>
         </div>
         <FormGroup>
-          <Label>Address</Label>
-          <Input name='address' placeholder='21 Doctor Street' />
+          <Label>Numéro RPPS</Label>
+          <Input name='address' placeholder='1234567891011' />
         </FormGroup>
         <FormGroup>
-          <Label>Zup</Label>
-          <Input name='zup' placeholder='19103' />
+          <Label>Adresse</Label>
+          <Input name='address' placeholder='21 rue du Docteur Girbal' />
         </FormGroup>
-        <FormGroup>
-          <Label>City</Label>
-          <Input name='city' placeholder='Philadelphia' />
-        </FormGroup>
-        <Button type='submit'>Update</Button>
+        <div className='group-row'>
+          <FormGroup>
+            <Label>Code Postal</Label>
+            <Input name='zup' placeholder='13010' />
+          </FormGroup>
+          <FormGroup>
+            <Label>Ville</Label>
+            <Input name='city' placeholder='Marseille' />
+          </FormGroup>
+        </div>
+        <Button type='submit'>Enregistrer</Button>
       </Form>
     </div>
   );

@@ -5,10 +5,10 @@ import './Input.scss';
 
 function Input({
   className = '',
-  disabled = false,
   name,
   placeholder = '',
   type = 'text',
+  ...rest
 }) {
   const {
     register,
@@ -20,8 +20,8 @@ function Input({
         className={`form-control ${className}`.trim()}
         type={type}
         placeholder={placeholder}
-        disabled={disabled}
         {...register(name)}
+        {...rest}
       />
 
       {!isValid && errors[name] && (

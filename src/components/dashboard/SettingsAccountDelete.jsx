@@ -7,21 +7,20 @@ function SettingsAccountDelete() {
     <div className='section_settings-delete'>
       <h2 className='settings_title'>
         <Icon name='error-warning' />
-        Delete your account
+        Suppression du compte
       </h2>
       <div className='settings_delete-message'>
         <p>
-          Once you have deleted your Aceso account, you cannot go back. Please,
-          be sure before you delete.
+          Une fois que vous avez supprimé votre compte Aceso, vous ne pouvez
+          plus revenir en arrière. S'il vous plaît, soyez sûr avant de
+          supprimer.
         </p>
       </div>
       <Button
         type='button'
-        onClick={() =>
-          alert('Aceso is still in developpement, try again later')
-        }
+        onClick={() => alert('Aceso est en cours de développement.')}
       >
-        Delete Account
+        Supprimer mon compte
       </Button>
     </div>
   );

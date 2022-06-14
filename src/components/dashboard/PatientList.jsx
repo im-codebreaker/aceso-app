@@ -1,41 +1,46 @@
 import * as React from 'react';
-import { Button, Icon, SearchInput } from 'components/ui';
-import { Link } from 'react-router-dom';
+import { Button, Icon, SearchInput, Table } from 'components/ui';
+import { Link, useNavigate } from 'react-router-dom';
 import { usePatient } from 'context/Patient';
 import './PatientList.scss';
 
 function PatientList() {
   let { patientList } = usePatient();
+  let navigate = useNavigate();
 
   const [patient, setPatient] = React.useState([]);
 
   React.useEffect(() => {
     setPatient(patientList);
-  }, []);
+  }, [patientList]);
 
   return (
     <main className='container'>
-      <h1>PatientList</h1>
+      <h1>Liste des patients</h1>
       <section className='section_patient'>
         <div className='section_patient-topbar'>
-          <SearchInput type='search' placeholder='Search a patient ...' />
-          <Button type='button' fullWidth>
+          <SearchInput type='search' placeholder='Chercher un patient ...' />
+          <Button
+            type='button'
+            fullWidth
+            onClick={() => navigate('../add-new-patient')}
+          >
             <Icon name='add' />
-            Add a patient
+            Ajouter un patient
           </Button>
         </div>
         <div className='section_patient-wrapper'>
-          <table className='patient_table'>
+          <Table>
             <thead>
               <tr>
                 <th>
                   <Icon name='user' />
                 </th>
-                <th>Patient Name</th>
-                <th>Birthday date</th>
-                <th>Social security number</th>
-                <th>Referring doctor</th>
-                <th>Record</th>
+                <th>Nom du patient</th>
+                <th>Date de naissance</th>
+                <th>N° Sécurité Sociale</th>
+                <th>Médecin traitant</th>
+                <th>Dossier</th>
               </tr>
             </thead>
             <tbody>
@@ -60,7 +65,7 @@ function PatientList() {
                 );
               })}
             </tbody>
-          </table>
+          </Table>
         </div>
       </section>
     </main>

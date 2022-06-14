@@ -1,7 +1,16 @@
 @use '../../../assets/styles/functions';
+@use '../../../assets/styles/variables';
 
 .form-group {
   display: flex;
   flex-direction: column;
+  flex: 1;
   margin-bottom: functions.space(3);
+}
+.form_title {
+  font-family: contentRegular;
+  color: var(--label-color);
+  font-weight: 400;
+  font-size: variables.$body;
+  border-bottom: 1px solid variables.$light1;
 }

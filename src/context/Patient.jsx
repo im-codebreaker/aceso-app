@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const patientList = [
+const patientsList = [
   {
     id: 1,
     sex: 'men',
@@ -179,9 +179,13 @@ export function usePatient() {
   return React.useContext(PatientContext);
 }
 export default function PatientProvider({ children }) {
+  const [patientList, setPatientList] = React.useState(patientsList);
+
   const value = {
     patientList: patientList,
+    addNewPatient: (patient) => setPatientList([...patientList, patient]),
   };
+
   return (
     <PatientContext.Provider value={value}>{children}</PatientContext.Provider>
   );

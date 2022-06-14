@@ -1,0 +1,40 @@
+@use './assets/styles/variables';
+@use './assets/styles/functions';
+
+.form_add-patient {
+  @media screen and (min-width: 64em) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'a b' 'a c';
+    gap: 40px;
+  }
+}
+.patient_status {
+  grid-area: a;
+}
+.patient_contact {
+  grid-area: b;
+}
+.patient_administrative {
+  grid-area: c;
+}
+.patient_status-gender,
+.patient_status-alarm {
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  margin-left: auto;
+  width: 50%;
+}
+.patient_status-gender > * {
+  flex: 1;
+}
+.status_controls {
+  display: flex;
+}
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: functions.space(2);
+}

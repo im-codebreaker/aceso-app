@@ -30,27 +30,27 @@ function RequestPasswordForm() {
       <FormProvider {...methods}>
         <Form type='reset' onSubmit={methods.handleSubmit(onSubmit)}>
           <FormHeading>
-            <h2>Reset your password</h2>
+            <h2>Réinitialiser votre mot de passe</h2>
             <p>
-              Enter the email address associated to your Aceso account to
-              request a link to reset your password.
+              Entrez l'adresse mail associée à votre compte Aceso pour demander
+              un lien de réinitialisation de votre mot de passe.
             </p>
           </FormHeading>
           <FormGroup>
             <Label>Email</Label>
             <Input
               name='email'
-              placeholder='Enter the email associated to your account'
+              placeholder="Entrez l'adresse mail associée à votre compte Aceso"
             />
             {hasError && (
               <Alert
-                message='Email submitted is not associated with any Aceso account'
+                message="L'adresse mail soumise n'est liée à aucun compte Aceso"
                 ghost
                 severity='error'
               />
             )}
           </FormGroup>
-          <Button type='submit'>Request a link</Button>
+          <Button type='submit'>Demander un lien</Button>
         </Form>
       </FormProvider>
     </main>

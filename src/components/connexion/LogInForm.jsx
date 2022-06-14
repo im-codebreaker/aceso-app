@@ -47,35 +47,38 @@ function LogInForm() {
       <FormProvider {...methods}>
         <Form type='login' onSubmit={methods.handleSubmit(onSubmit)}>
           <FormHeading>
-            <h2>Connect to Aceso</h2>
-            <p>Connect to your Aceso account with your email.</p>
+            <h2>Se connecter à Aceso</h2>
+            <p>Connectez-vous à votre compte Aceso avec votre adresse mail.</p>
             {hasError && (
               <div>
-                {hasError} - Email and password seems to not match, please
-                verify this account is existing.
+                {hasError} - L'email et le mot de passe semble ne pas
+                correspondre, veuillez vérifier que ce compte Aceso existe.
               </div>
             )}
           </FormHeading>
           <FormGroup>
             <Label>Email</Label>
-            <Input name='email' type='email' placeholder='Enter email' />
+            <Input name='email' type='email' placeholder='john.doe@gmail.fr' />
           </FormGroup>
           <FormGroup>
-            <Label>Password</Label>
+            <Label>Mot de passe</Label>
             <Input
               name='password'
               type='password'
-              placeholder='Enter your password'
+              placeholder='******************'
             />
             <Link className='reset-link' to='/request-password'>
-              Forgot your password ?
+              Mot de passe oublié ?
             </Link>
           </FormGroup>
           <Button type='submit' variant='primary' fullWidth>
-            Continue
+            Se connecter
           </Button>
           <FormFooter>
-            <p>Don't have an account ? <Link to='/register'>Register</Link></p>
+            <p>
+              Vous ne disposez pas d'un compte Aceso ?{' '}
+              <Link to='/register'>S'inscrire</Link>
+            </p>
           </FormFooter>
         </Form>
       </FormProvider>

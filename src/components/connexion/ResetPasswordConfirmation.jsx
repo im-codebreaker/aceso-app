@@ -1,18 +1,21 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { ButtonLink } from 'components/ui';
 
 function ResetPasswordConfirmation() {
   return (
     <main className='container'>
       <main className='container'>
         <section className='section_request-confirmation'>
-          <h2>Password has been updated</h2>
+          <h2>Le mot de passe a été mis à jour</h2>
           <p>
-            Your password has been successfully updated, you can now access to
-            Aceso with your new credentials.
+            Votre mot de passe a été mis à jour avec succès, vous pouvez accéder
+            des maintenant à votre application Aceso avec vos nouveaux
+            identifiants.
           </p>
           <img src='https://via.placeholder.com/360' alt='' />
-          <Link to='/login'>Login</Link>
+          <ButtonLink href='/login' fullWidth>
+            Se connecter
+          </ButtonLink>
         </section>
       </main>
     </main>
