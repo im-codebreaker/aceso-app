@@ -1,6 +1,8 @@
 import * as React from 'react';
+
 import { Button, Icon, Table } from 'components/ui';
-function TreatmentTab() {
+
+function TreatmentTab({ treatment, handleTreatmentDelete }) {
   return (
     <section className='medical_treatment'>
       <div className='section_patient-wrapper'>
@@ -17,102 +19,26 @@ function TreatmentTab() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>METFORMINE EG 1000 mg</td>
-              <td>1</td>
-              <td>0</td>
-              <td>1</td>
-              <td>13/01/2022</td>
-              <td>13/01/2022</td>
-              <td>
-                <Button variant='ghost'>
-                  <Icon name='pencil' />
-                </Button>
-                <Button variant='ghost'>
-                  <Icon name='delete-bin' />
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <td>METFORMINE EG 1000 mg</td>
-              <td>1</td>
-              <td>0</td>
-              <td>1</td>
-              <td>13/01/2022</td>
-              <td>13/01/2022</td>
-              <td>
-                <Button variant='ghost'>
-                  <Icon name='pencil' />
-                </Button>
-                <Button variant='ghost'>
-                  <Icon name='delete-bin' />
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <td>METFORMINE EG 1000 mg</td>
-              <td>1</td>
-              <td>0</td>
-              <td>1</td>
-              <td>13/01/2022</td>
-              <td>13/01/2022</td>
-              <td>
-                <Button variant='ghost'>
-                  <Icon name='pencil' />
-                </Button>
-                <Button variant='ghost'>
-                  <Icon name='delete-bin' />
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <td>METFORMINE EG 1000 mg</td>
-              <td>1</td>
-              <td>0</td>
-              <td>1</td>
-              <td>13/01/2022</td>
-              <td>13/01/2022</td>
-              <td>
-                <Button variant='ghost'>
-                  <Icon name='pencil' />
-                </Button>
-                <Button variant='ghost'>
-                  <Icon name='delete-bin' />
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <td>METFORMINE EG 1000 mg</td>
-              <td>1</td>
-              <td>0</td>
-              <td>1</td>
-              <td>13/01/2022</td>
-              <td>13/01/2022</td>
-              <td>
-                <Button variant='ghost'>
-                  <Icon name='pencil' />
-                </Button>
-                <Button variant='ghost'>
-                  <Icon name='delete-bin' />
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <td>METFORMINE EG 1000 mg</td>
-              <td>1</td>
-              <td>0</td>
-              <td>1</td>
-              <td>13/01/2022</td>
-              <td>13/01/2022</td>
-              <td>
-                <Button variant='ghost'>
-                  <Icon name='pencil' />
-                </Button>
-                <Button variant='ghost'>
-                  <Icon name='delete-bin' />
-                </Button>
-              </td>
-            </tr>
+            {treatment.map((drug) => {
+              return (
+                <tr key={drug.id}>
+                  <td>{drug.drug_name}</td>
+                  <td>{drug.frequency[0]}</td>
+                  <td>{drug.frequency[1]}</td>
+                  <td>{drug.frequency[2]}</td>
+                  <td>{drug.treatment_start}</td>
+                  <td>{drug.treatment_end}</td>
+                  <td>
+                    <Button
+                      variant='ghost'
+                      onClick={() => handleTreatmentDelete(drug.id)}
+                    >
+                      <Icon name='delete-bin' />
+                    </Button>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </Table>
       </div>

@@ -9,7 +9,7 @@ import './PatientRecord.scss';
 
 function PatientRecord() {
   let { patientId } = useParams();
-  let { patientList } = usePatient();
+  const [patientList] = usePatient();
 
   const [patient, setPatient] = React.useState({});
 
@@ -20,6 +20,11 @@ function PatientRecord() {
 
     setPatient(patient);
   }, [patientList, patientId]);
+
+  function handleTreatmentDelete(id) {
+    const treatment = patient.treatment.filter((drug) => drug.id !== id);
+    setPatient({ ...patient, treatment });
+  }
 
   return (
     <main className='container'>
@@ -38,7 +43,10 @@ function PatientRecord() {
           <h2>Any content 1</h2>
         </TabPanel>
         <TabPanel>
-          <TreatmentTab />
+          <TreatmentTab
+            treatment={patient.treatment}
+            handleTreatmentDelete={handleTreatmentDelete}
+          />
         </TabPanel>
         <TabPanel>
           <h2>Any content 3</h2>

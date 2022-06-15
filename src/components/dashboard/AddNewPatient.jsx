@@ -13,10 +13,6 @@ import {
 } from 'components/ui';
 import './AddNewPatient.scss';
 
-function createPatient(data) {
-  console.log(data);
-}
-
 function AddNewPatient() {
   const methods = useForm();
   const navigate = useNavigate();
@@ -25,7 +21,7 @@ function AddNewPatient() {
     <main className='container'>
       <h1>Ajouter un patient</h1>
       <FormProvider {...methods}>
-        <Form type='add-patient' onSubmit={methods.handleSubmit(createPatient)}>
+        <Form type='add-patient'>
           <div className='patient_status'>
             <FormTitle>
               <Icon name='user' />

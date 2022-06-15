@@ -17,6 +17,50 @@ const patientsList = [
     zup: '38000',
     city: 'Grenoble',
     history: [],
+    treatment: [
+      {
+        id: 1,
+        drug_name: 'METFORMINE EG 1000 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 2,
+        drug_name: 'AMLODIPINE BIOGARAN 5 mg',
+        frequency: [0, 1, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 3,
+        drug_name: 'ACIDE FOLIQUE',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 4,
+        drug_name: 'FINASTERIDE 5 mg',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 5,
+        drug_name: 'ELIQUIS 5 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 6,
+        drug_name: 'ATENOLOL MYLAN 100 mg',
+        frequency: [0.5, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+    ],
   },
   {
     id: 2,
@@ -34,6 +78,50 @@ const patientsList = [
     zup: '38000',
     city: 'Grenoble',
     history: [],
+    treatment: [
+      {
+        id: 1,
+        drug_name: 'METFORMINE EG 1000 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 2,
+        drug_name: 'AMLODIPINE BIOGARAN 5 mg',
+        frequency: [0, 1, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 3,
+        drug_name: 'ACIDE FOLIQUE',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 4,
+        drug_name: 'FINASTERIDE 5 mg',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 5,
+        drug_name: 'ELIQUIS 5 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 6,
+        drug_name: 'ATENOLOL MYLAN 100 mg',
+        frequency: [0.5, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+    ],
   },
   {
     id: 3,
@@ -51,6 +139,50 @@ const patientsList = [
     zup: '38100',
     city: 'Grenoble',
     history: [],
+    treatment: [
+      {
+        id: 1,
+        drug_name: 'METFORMINE EG 1000 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 2,
+        drug_name: 'AMLODIPINE BIOGARAN 5 mg',
+        frequency: [0, 1, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 3,
+        drug_name: 'ACIDE FOLIQUE',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 4,
+        drug_name: 'FINASTERIDE 5 mg',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 5,
+        drug_name: 'ELIQUIS 5 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 6,
+        drug_name: 'ATENOLOL MYLAN 100 mg',
+        frequency: [0.5, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+    ],
   },
   {
     id: 4,
@@ -68,6 +200,50 @@ const patientsList = [
     zup: '38130',
     city: 'Echirolles',
     history: [],
+    treatment: [
+      {
+        id: 1,
+        drug_name: 'METFORMINE EG 1000 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 2,
+        drug_name: 'AMLODIPINE BIOGARAN 5 mg',
+        frequency: [0, 1, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 3,
+        drug_name: 'ACIDE FOLIQUE',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 4,
+        drug_name: 'FINASTERIDE 5 mg',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 5,
+        drug_name: 'ELIQUIS 5 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 6,
+        drug_name: 'ATENOLOL MYLAN 100 mg',
+        frequency: [0.5, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+    ],
   },
   {
     id: 5,
@@ -85,6 +261,50 @@ const patientsList = [
     zup: '38000',
     city: 'Grenoble',
     history: [],
+    treatment: [
+      {
+        id: 1,
+        drug_name: 'METFORMINE EG 1000 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 2,
+        drug_name: 'AMLODIPINE BIOGARAN 5 mg',
+        frequency: [0, 1, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 3,
+        drug_name: 'ACIDE FOLIQUE',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 4,
+        drug_name: 'FINASTERIDE 5 mg',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 5,
+        drug_name: 'ELIQUIS 5 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 6,
+        drug_name: 'ATENOLOL MYLAN 100 mg',
+        frequency: [0.5, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+    ],
   },
   {
     id: 6,
@@ -102,6 +322,50 @@ const patientsList = [
     zup: '38100',
     city: 'Grenoble',
     history: [],
+    treatment: [
+      {
+        id: 1,
+        drug_name: 'METFORMINE EG 1000 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 2,
+        drug_name: 'AMLODIPINE BIOGARAN 5 mg',
+        frequency: [0, 1, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 3,
+        drug_name: 'ACIDE FOLIQUE',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 4,
+        drug_name: 'FINASTERIDE 5 mg',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 5,
+        drug_name: 'ELIQUIS 5 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 6,
+        drug_name: 'ATENOLOL MYLAN 100 mg',
+        frequency: [0.5, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+    ],
   },
   {
     id: 7,
@@ -119,6 +383,50 @@ const patientsList = [
     zup: '38000',
     city: 'Grenoble',
     history: [],
+    treatment: [
+      {
+        id: 1,
+        drug_name: 'METFORMINE EG 1000 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 2,
+        drug_name: 'AMLODIPINE BIOGARAN 5 mg',
+        frequency: [0, 1, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 3,
+        drug_name: 'ACIDE FOLIQUE',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 4,
+        drug_name: 'FINASTERIDE 5 mg',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 5,
+        drug_name: 'ELIQUIS 5 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 6,
+        drug_name: 'ATENOLOL MYLAN 100 mg',
+        frequency: [0.5, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+    ],
   },
   {
     id: 8,
@@ -136,6 +444,50 @@ const patientsList = [
     zup: '38100',
     city: 'Grenoble',
     history: [],
+    treatment: [
+      {
+        id: 1,
+        drug_name: 'METFORMINE EG 1000 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 2,
+        drug_name: 'AMLODIPINE BIOGARAN 5 mg',
+        frequency: [0, 1, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 3,
+        drug_name: 'ACIDE FOLIQUE',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 4,
+        drug_name: 'FINASTERIDE 5 mg',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 5,
+        drug_name: 'ELIQUIS 5 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 6,
+        drug_name: 'ATENOLOL MYLAN 100 mg',
+        frequency: [0.5, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+    ],
   },
   {
     id: 9,
@@ -153,6 +505,50 @@ const patientsList = [
     zup: '38100',
     city: 'Grenoble',
     history: [],
+    treatment: [
+      {
+        id: 1,
+        drug_name: 'METFORMINE EG 1000 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 2,
+        drug_name: 'AMLODIPINE BIOGARAN 5 mg',
+        frequency: [0, 1, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 3,
+        drug_name: 'ACIDE FOLIQUE',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 4,
+        drug_name: 'FINASTERIDE 5 mg',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 5,
+        drug_name: 'ELIQUIS 5 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 6,
+        drug_name: 'ATENOLOL MYLAN 100 mg',
+        frequency: [0.5, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+    ],
   },
   {
     id: 10,
@@ -170,6 +566,50 @@ const patientsList = [
     zup: '38100',
     city: 'Grenoble',
     history: [],
+    treatment: [
+      {
+        id: 1,
+        drug_name: 'METFORMINE EG 1000 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 2,
+        drug_name: 'AMLODIPINE BIOGARAN 5 mg',
+        frequency: [0, 1, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 3,
+        drug_name: 'ACIDE FOLIQUE',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 4,
+        drug_name: 'FINASTERIDE 5 mg',
+        frequency: [0, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 5,
+        drug_name: 'ELIQUIS 5 mg',
+        frequency: [1, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+      {
+        id: 6,
+        drug_name: 'ATENOLOL MYLAN 100 mg',
+        frequency: [0.5, 0, 1],
+        treatment_start: '13/01/2022',
+        treatment_end: '13/01/2022',
+      },
+    ],
   },
 ];
 
@@ -181,12 +621,9 @@ export function usePatient() {
 export default function PatientProvider({ children }) {
   const [patientList, setPatientList] = React.useState(patientsList);
 
-  const value = {
-    patientList: patientList,
-    addNewPatient: (patient) => setPatientList([...patientList, patient]),
-  };
-
   return (
-    <PatientContext.Provider value={value}>{children}</PatientContext.Provider>
+    <PatientContext.Provider value={[patientList, setPatientList]}>
+      {children}
+    </PatientContext.Provider>
   );
 }
