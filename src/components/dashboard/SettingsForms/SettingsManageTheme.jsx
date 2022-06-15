@@ -1,5 +1,13 @@
 import * as React from 'react';
-import { Button, Icon, Form, FormGroup, Label, Radio } from 'components/ui';
+import {
+  Button,
+  Icon,
+  Form,
+  FormGroup,
+  FormTitle,
+  Label,
+  Radio,
+} from 'components/ui';
 
 function SettingsManageTheme({ handleSubmit }) {
   function onSubmit({ theme }) {
@@ -11,10 +19,10 @@ function SettingsManageTheme({ handleSubmit }) {
 
   return (
     <div className='section_settings-theme'>
-      <h2 className='settings_title'>
+      <FormTitle>
         <Icon name='palette' />
         Gestion des thèmes
-      </h2>
+      </FormTitle>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <FormGroup className='settings_controls-wrapper'>
           <div className='settings_controls'>

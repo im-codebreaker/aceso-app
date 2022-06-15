@@ -1,6 +1,13 @@
 import * as React from 'react';
-import { Button, Form, FormGroup, Icon, Input, Label } from 'components/ui';
-import './Settings.scss';
+import {
+  Button,
+  Form,
+  FormGroup,
+  FormTitle,
+  Icon,
+  Input,
+  Label,
+} from 'components/ui';
 
 function SettingsManagePassword({ handleSubmit }) {
   function onSubmit({ password, passwordConfirmation }) {
@@ -8,10 +15,10 @@ function SettingsManagePassword({ handleSubmit }) {
   }
   return (
     <div className='section_settings-password'>
-      <h2 className='settings_title'>
+      <FormTitle>
         <Icon name='lock-password' />
         Gestion des mots de passe
-      </h2>
+      </FormTitle>
       <Form type='update-password' onSubmit={handleSubmit(onSubmit)}>
         <FormGroup>
           <Label>Nouveau mot de passe</Label>

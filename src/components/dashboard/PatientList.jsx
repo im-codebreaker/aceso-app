@@ -5,21 +5,39 @@ import { usePatient } from 'context/Patient';
 import './PatientList.scss';
 
 function PatientList() {
-  let { patientList } = usePatient();
+  let [patientList] = usePatient();
   let navigate = useNavigate();
 
   const [patient, setPatient] = React.useState([]);
+  const [inputText, setInputText] = React.useState('');
 
   React.useEffect(() => {
     setPatient(patientList);
   }, [patientList]);
+
+  function handleChangeText(e) {
+    setInputText(e.target.value);
+  }
+
+  const filteredPatient = patient.filter((el) => {
+    if (inputText === '') {
+      return el;
+    } else {
+      return el.lastName.includes(inputText);
+    }
+  });
 
   return (
     <main className='container'>
       <h1>Liste des patients</h1>
       <section className='section_patient'>
         <div className='section_patient-topbar'>
-          <SearchInput type='search' placeholder='Chercher un patient ...' />
+          <SearchInput
+            type='search'
+            value={inputText}
+            onChange={handleChangeText}
+            placeholder='Chercher un patient ...'
+          />
           <Button
             type='button'
             fullWidth
@@ -44,7 +62,7 @@ function PatientList() {
               </tr>
             </thead>
             <tbody>
-              {patient.map((patient) => {
+              {filteredPatient.map((patient) => {
                 return (
                   <tr key={patient.id}>
                     <td>

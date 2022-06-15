@@ -8,7 +8,6 @@ import {
   Input,
   Label,
 } from 'components/ui';
-import './Settings.scss';
 
 function SettingsManageInformation({ handleSubmit }) {
   function onSubmit({ lastName, firstName, email, phone, address, zup, city }) {

@@ -1,10 +1,36 @@
 import * as React from 'react';
 
-import { Button, Icon, Table } from 'components/ui';
+import { Button, Icon, SearchInput, Table } from 'components/ui';
 
 function TreatmentTab({ treatment, handleTreatmentDelete }) {
+  const [inputText, setInputText] = React.useState('');
+
+  function handleChangeText(e) {
+    setInputText(e.target.value);
+  }
+
+  const filteredTreatment = treatment.filter((el) => {
+    if (inputText === '') {
+      return el;
+    } else {
+      return el.drugName.includes(inputText);
+    }
+  });
+
   return (
     <section className='medical_treatment'>
+      <div className='section_patient-topbar'>
+        <SearchInput
+          type='search'
+          value={inputText}
+          onChange={handleChangeText}
+          placeholder='Chercher un traitement ...'
+        />
+        <Button type='button' fullWidth>
+          <Icon name='add' />
+          Ajouter un traitement
+        </Button>
+      </div>
       <div className='section_patient-wrapper'>
         <Table>
           <thead>
@@ -19,15 +45,15 @@ function TreatmentTab({ treatment, handleTreatmentDelete }) {
             </tr>
           </thead>
           <tbody>
-            {treatment.map((drug) => {
+            {filteredTreatment.map((drug) => {
               return (
                 <tr key={drug.id}>
-                  <td>{drug.drug_name}</td>
+                  <td>{drug.drugName}</td>
                   <td>{drug.frequency[0]}</td>
                   <td>{drug.frequency[1]}</td>
                   <td>{drug.frequency[2]}</td>
-                  <td>{drug.treatment_start}</td>
-                  <td>{drug.treatment_end}</td>
+                  <td>{drug.treatmentStart}</td>
+                  <td>{drug.treatmentEnd}</td>
                   <td>
                     <Button
                       variant='ghost'

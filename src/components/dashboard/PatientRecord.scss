@@ -2,11 +2,21 @@
 @use './assets/styles/functions';
 
 .administrative_file {
-  display: grid;
-  grid-template-areas:
-    'identity contact'
-    'history contact';
-  gap: 1rem;
+  @media screen and (min-width: 64em) {
+    display: grid;
+    grid-template-areas:
+      'identity contact'
+      'history contact';
+    gap: 1rem;
+  }
+}
+.administrative_file-identity,
+.administrative_file-history,
+.administrative_file-contact {
+  margin-bottom: 2rem;
+  @media screen and (min-width: 64em) {
+    margin-bottom: 0;
+  }
 }
 .box_header {
   padding: functions.space(1) functions.space(2);
@@ -57,15 +67,41 @@
     justify-content: space-between;
   }
 }
+.administrative_file,
+.medical_treatment,
+.diagram_care,
+.relationship {
+  margin-top: functions.space(3);
+}
+.relationship_wrapper h2 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+.relationship_wrapper-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  margin: functions.space(4) 0;
+
+  @media screen and (min-width: 57.5em) {
+    flex-direction: row;
+  }
+}
+.react-tabs {
+  margin-top: functions.space(4);
+}
 .react-tabs__tab-list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 1rem;
   border-bottom: 1px solid variables.$light1;
+  overflow-x: auto;
 }
 .react-tabs__tab {
   cursor: pointer;
   color: var(--label-color);
+  white-space: nowrap;
 }
 .react-tabs__tab--selected {
   border-bottom: 2px solid var(--menu-background);

@@ -1,14 +1,13 @@
 import * as React from 'react';
-import { Button, Icon } from 'components/ui';
-import './Settings.scss';
+import { Button, Icon, FormTitle } from 'components/ui';
 
 function SettingsAccountDelete() {
   return (
     <div className='section_settings-delete'>
-      <h2 className='settings_title'>
+      <FormTitle>
         <Icon name='error-warning' />
         Suppression du compte
-      </h2>
+      </FormTitle>
       <div className='settings_delete-message'>
         <p>
           Une fois que vous avez supprimé votre compte Aceso, vous ne pouvez

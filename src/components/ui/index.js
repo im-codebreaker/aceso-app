@@ -1,6 +1,7 @@
 export * from './Alert/Alert';
 export * from './Button/Button';
 export * from './Button/ButtonLink';
+export * from './Card/Card';
 export * from './Forms/Form';
 export * from './Forms/FormGroup';
 export * from './Forms/FormFooter';

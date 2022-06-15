@@ -1,0 +1,51 @@
+@use '../../../assets/styles/variables';
+@use '../../../assets/styles/functions';
+
+.card {
+  width: 200px;
+  height: 200px;
+  padding: 1rem;
+  border-radius: 8px;
+  color: variables.$light0;
+  background-color: var(--menu-background);
+  box-shadow: var(--elevation4);
+}
+.card_header {
+  position: relative;
+  height: 80px;
+}
+.card_header::before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 52px;
+  background: transparent url('/assets/images/dot_pattern.svg') center center
+    no-repeat;
+}
+.card_header picture {
+  position: relative;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  border-radius: 100%;
+  border: 2px solid variables.$secondary;
+}
+.card_body-name {
+  display: block;
+  font-weight: 600;
+}
+.card_body-relation {
+  display: block;
+  text-align: right;
+}
+.card_body-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: variables.$light0;
+  margin-top: functions.space(2);
+}
+.card_body-links a {
+  color: variables.$light0;
+}

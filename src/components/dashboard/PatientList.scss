@@ -1,6 +1,9 @@
 @use './assets/styles/functions';
 @use './assets/styles/variables';
 
+.section_patient {
+  margin-top: functions.space(4);
+}
 .section_patient-topbar {
   display: flex;
   flex-direction: column;

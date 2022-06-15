@@ -2,9 +2,12 @@ import * as React from 'react';
 import { usePatient } from 'context/Patient';
 import { useParams } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { AdministrativeTab } from './AdministrativeTab';
-import { TreatmentTab } from './TreatmentTab';
-
+import {
+  AdministrativeTab,
+  RelationshipTab,
+  TreatmentTab,
+  DiagramTab,
+} from './PatientRecordTabs';
 import './PatientRecord.scss';
 
 function PatientRecord() {
@@ -40,7 +43,7 @@ function PatientRecord() {
           <AdministrativeTab patient={patient} />
         </TabPanel>
         <TabPanel>
-          <h2>Any content 1</h2>
+          <RelationshipTab family={patient.family} staff={patient.staff} />
         </TabPanel>
         <TabPanel>
           <TreatmentTab
@@ -49,7 +52,7 @@ function PatientRecord() {
           />
         </TabPanel>
         <TabPanel>
-          <h2>Any content 3</h2>
+          <DiagramTab />
         </TabPanel>
       </Tabs>
     </main>

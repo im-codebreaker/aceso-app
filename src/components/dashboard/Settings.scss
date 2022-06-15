@@ -9,6 +9,7 @@
   border-bottom: 1px solid variables.$light1;
 }
 .section_settings {
+  margin-top: functions.space(4);
   @media screen and (min-width: 64em) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -23,12 +24,6 @@
   @media screen and (min-width: 64em) {
     margin: 0;
   }
-}
-.form_update-infos,
-.form_update-password,
-.settings_delete-message,
-.settings_controls-wrapper {
-  margin-top: 1rem;
 }
 .section_settings-infos {
   @media screen and (min-width: 64em) {

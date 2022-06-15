@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
-import { SettingsManageInformation } from './SettingsManageInformation';
-import { SettingsManagePassword } from './SettingsManagePassword';
-import { SettingsAccountDelete } from './SettingsAccountDelete';
-import { SettingsManageTheme } from './SettingsManageTheme';
+import {
+  SettingsManageInformation,
+  SettingsManagePassword,
+  SettingsAccountDelete,
+  SettingsManageTheme,
+} from './SettingsForms';
 import './Settings.scss';
 
 function Settings() {

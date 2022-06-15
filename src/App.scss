@@ -78,15 +78,13 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
 }
+main {
+  padding: functions.space(5) 0;
+}
 a {
   font-size: variables.$labelMedium;
   color: var(--link-color);
   font-family: contentRegular;
-}
-section,
-form {
-  margin-top: functions.space(8);
-  padding-bottom: functions.space(20);
 }
 .App {
   display: flex;
