@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { Card } from 'components/ui';
+import { Button, Card, Modal } from 'components/ui';
+import { AddNewRelation } from '../AddNewRelation';
 
 function RelationshipTab({ family, staff }) {
-  console.log(family);
+  const [isOpen, setIsOpen] = React.useState(false);
+
   return (
     <section className='relationship'>
       <div className='relationship_wrapper'>
@@ -15,6 +17,11 @@ function RelationshipTab({ family, staff }) {
               </li>
             );
           })}
+          <li className='button_wrapper'>
+            <Button variant='ghost' onClick={() => setIsOpen(true)}>
+              Ajouter
+            </Button>
+          </li>
         </ul>
       </div>
       <div className='relationship_wrapper'>
@@ -27,8 +34,18 @@ function RelationshipTab({ family, staff }) {
               </li>
             );
           })}
+          <li className='button_wrapper'>
+            <Button variant='ghost' onClick={() => setIsOpen(true)}>
+              Ajouter
+            </Button>
+          </li>
         </ul>
       </div>
+      {isOpen && (
+        <Modal id='portal-container'>
+          <AddNewRelation setIsOpen={setIsOpen} />
+        </Modal>
+      )}
     </section>
   );
 }

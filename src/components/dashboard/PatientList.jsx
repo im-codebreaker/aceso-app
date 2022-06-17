@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Button, Icon, SearchInput, Table } from 'components/ui';
 import { Link, useNavigate } from 'react-router-dom';
 import { usePatient } from 'context/Patient';
+import { calculateAge } from 'utils';
 import './PatientList.scss';
 
 function PatientList() {
@@ -47,7 +48,7 @@ function PatientList() {
             Ajouter un patient
           </Button>
         </div>
-        <div className='section_patient-wrapper'>
+        <div className='wrapper_elevation'>
           <Table>
             <thead>
               <tr>
@@ -63,6 +64,7 @@ function PatientList() {
             </thead>
             <tbody>
               {filteredPatient.map((patient) => {
+                console.log(patient.birthday);
                 return (
                   <tr key={patient.id}>
                     <td>
@@ -71,12 +73,14 @@ function PatientList() {
                     <td>
                       {patient.lastName} {patient.firstName}
                     </td>
-                    <td>{patient.birthday}</td>
+                    <td>
+                      {patient.birthday} - {calculateAge(patient.birthday)} ans
+                    </td>
                     <td>{patient.ssn}</td>
                     <td>{patient.doctor}</td>
                     <td>
                       <Link to={`../patient-record/${patient.id}`}>
-                        <Icon name='file' />
+                        <Icon name='dossier' />
                       </Link>
                     </td>
                   </tr>

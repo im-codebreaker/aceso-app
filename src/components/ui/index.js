@@ -10,6 +10,7 @@ export * from './Forms/FormHeading';
 export * from './Icon/Icon';
 export * from './Input/Input';
 export * from './Label/Label';
+export * from './Modal/Modal';
 export * from './Radio/Radio';
 export * from './SearchInput/SearchInput';
 export * from './Tables/Table';

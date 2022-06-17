@@ -17,11 +17,3 @@
 .section_patient-topbar > * {
   flex: 1;
 }
-.section_patient-wrapper {
-  margin: functions.space(1) 0;
-  padding: functions.space(1);
-  border-radius: 0.5rem;
-  background-color: var(--background-color);
-  box-shadow: var(--elevation4);
-  overflow: auto;
-}

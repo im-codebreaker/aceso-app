@@ -93,10 +93,26 @@ a {
   height: 100vh;
   overflow: hidden;
 }
+.portal_container {
+  position: relative;
+  z-index: 999;
+}
 .container {
   width: 80vw;
   max-width: 1085px;
   margin-inline: auto;
+}
+.wrapper_elevation {
+  margin: functions.space(1) 0;
+  padding: functions.space(1);
+  border-radius: 0.5rem;
+  background-color: var(--background-color);
+  box-shadow: var(--elevation4);
+  overflow: auto;
+}
+.align-right {
+  text-align: right;
+  display: block;
 }
 .group-row {
   @media screen and (min-width: 35em) {

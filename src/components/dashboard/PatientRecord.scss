@@ -48,14 +48,6 @@
 .administrative_file-contact {
   grid-area: contact;
 }
-.administrative_file-identity,
-.administrative_file-history,
-.administrative_file-contact {
-  padding: functions.space(1);
-  border-radius: 0.5rem;
-  background-color: var(--background-color);
-  box-shadow: var(--elevation4);
-}
 .box_content-fullname {
   color: var(--title-color);
   font-weight: 700;
@@ -77,15 +69,29 @@
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
 .relationship_wrapper-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.5rem;
+  display: grid;
+  justify-items: center;
+  gap: functions.space(3);
   margin: functions.space(4) 0;
 
-  @media screen and (min-width: 57.5em) {
-    flex-direction: row;
+  @media screen and (min-width: 40em) {
+    grid-template-columns: 200px 200px;
+    justify-items: flex-start;
   }
+  @media screen and (min-width: 57.5em) {
+    grid-template-columns: 200px 200px 200px;
+  }
+  @media screen and (min-width: 80em) {
+    grid-template-columns: 200px 200px 200px 200px;
+  }
+}
+.button_wrapper {
+  display: grid;
+  place-content: center;
+  width: 200px;
+  height: 200px;
+  border: 1px dashed var(--menu-background);
+  border-radius: 8px;
 }
 .react-tabs {
   margin-top: functions.space(4);
@@ -105,4 +111,9 @@
 }
 .react-tabs__tab--selected {
   border-bottom: 2px solid var(--menu-background);
+}
+.form_add-relation,
+.form_add-treatment {
+  max-height: 480px;
+  padding: functions.space(2);
 }

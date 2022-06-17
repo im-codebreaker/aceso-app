@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { Icon } from 'components/ui';
+import { calculateAge } from 'utils';
 
 function AdministrativeTab({ patient }) {
   return (
     <section className='administrative_file'>
-      <div className='administrative_file-identity'>
+      <div className='administrative_file-identity wrapper_elevation'>
         <header className='box_header'>
           <h2>Identité du patient</h2>
         </header>
@@ -13,22 +14,25 @@ function AdministrativeTab({ patient }) {
             <p>
               {patient.lastName} {patient.firstName}{' '}
               <span className='gender'>
-                <Icon name={patient.sex} />
+                <Icon name={patient.gender} />
               </span>
             </p>
           </div>
           <div>
-            <p>Né le {patient.birthday} à Grenoble - 66 ans</p>
+            <p>
+              Né le {patient.birthday} à {patient.birthPlace} -{' '}
+              {calculateAge(patient.birthday)} ans
+            </p>
           </div>
           <ul className='box_content-medical'>
             <li>
               <p>
-                <Icon name='bank-card' /> {patient.ssn} ({patient.ssn_city})
+                <Icon name='bank-card' /> {patient.ssn} ({patient.ssnCity})
               </p>
             </li>
             <li>
               <p>
-                <Icon name='service' /> {patient.health_mutual}
+                <Icon name='service' /> {patient.insurance}
               </p>
             </li>
             <li>
@@ -39,7 +43,7 @@ function AdministrativeTab({ patient }) {
           </ul>
         </div>
       </div>
-      <div className='administrative_file-history'>
+      <div className='administrative_file-history wrapper_elevation'>
         <header className='box_header'>
           <h2>Antécédent médicaux / Allergies / ETC</h2>
         </header>
@@ -51,7 +55,7 @@ function AdministrativeTab({ patient }) {
           )}
         </div>
       </div>
-      <div className='administrative_file-contact'>
+      <div className='administrative_file-contact wrapper_elevation'>
         <header className='box_header'>
           <h2>Coordonnées du patient</h2>
         </header>
@@ -65,7 +69,7 @@ function AdministrativeTab({ patient }) {
             </p>
           </div>
           <p>
-            <Icon name='map-pin-2' /> {patient.address} - {patient.zup}{' '}
+            <Icon name='map-pin-2' /> {patient.address} - {patient.zip}{' '}
             {patient.city}
           </p>
           <iframe

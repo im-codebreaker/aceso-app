@@ -1,9 +1,10 @@
 import * as React from 'react';
-
-import { Button, Icon, SearchInput, Table } from 'components/ui';
+import { Button, Icon, Modal, SearchInput, Table } from 'components/ui';
+import { AddNewTreatment } from '../AddNewTreatment';
 
 function TreatmentTab({ treatment, handleTreatmentDelete }) {
   const [inputText, setInputText] = React.useState('');
+  const [isOpen, setIsOpen] = React.useState(false);
 
   function handleChangeText(e) {
     setInputText(e.target.value);
@@ -26,12 +27,12 @@ function TreatmentTab({ treatment, handleTreatmentDelete }) {
           onChange={handleChangeText}
           placeholder='Chercher un traitement ...'
         />
-        <Button type='button' fullWidth>
+        <Button type='button' fullWidth onClick={() => setIsOpen(true)}>
           <Icon name='add' />
           Ajouter un traitement
         </Button>
       </div>
-      <div className='section_patient-wrapper'>
+      <div className='wrapper_elevation'>
         <Table>
           <thead>
             <tr>
@@ -68,6 +69,11 @@ function TreatmentTab({ treatment, handleTreatmentDelete }) {
           </tbody>
         </Table>
       </div>
+      {isOpen && (
+        <Modal id='portal-container'>
+          <AddNewTreatment setIsOpen={setIsOpen} />
+        </Modal>
+      )}
     </section>
   );
 }

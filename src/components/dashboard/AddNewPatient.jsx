@@ -17,11 +17,18 @@ function AddNewPatient() {
   const methods = useForm();
   const navigate = useNavigate();
 
+  function submitNewPatient(data) {
+    console.log({ ...data, history: [], family: [], staff: [] });
+  }
+
   return (
     <main className='container'>
       <h1>Ajouter un patient</h1>
       <FormProvider {...methods}>
-        <Form type='add-patient'>
+        <Form
+          type='add-patient'
+          onSubmit={methods.handleSubmit(submitNewPatient)}
+        >
           <div className='patient_status'>
             <FormTitle>
               <Icon name='user' />
@@ -54,7 +61,7 @@ function AddNewPatient() {
               <FormGroup>
                 <Label>Date de naissance</Label>
                 <Input
-                  name='birthDate'
+                  name='birthday'
                   placeholder='12/07/1957'
                   pattern='^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$'
                 />
@@ -75,7 +82,10 @@ function AddNewPatient() {
               </FormGroup>
               <FormGroup>
                 <Label>Environnement de vie</Label>
-                <Input name='birthPlace' placeholder='Hébergement individuel' />
+                <Input
+                  name='environment'
+                  placeholder='Hébergement individuel'
+                />
               </FormGroup>
             </div>
             <FormGroup className='patient_status-alarm'>
@@ -140,7 +150,7 @@ function AddNewPatient() {
             <div className='group-row'>
               <FormGroup>
                 <Label>Caisse</Label>
-                <Input name='ssn_city' placeholder='Marseille' />
+                <Input name='ssnCity' placeholder='Marseille' />
               </FormGroup>
               <FormGroup>
                 <Label>Mutuelle</Label>

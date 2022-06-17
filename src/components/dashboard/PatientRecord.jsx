@@ -2,6 +2,7 @@ import * as React from 'react';
 import { usePatient } from 'context/Patient';
 import { useParams } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Link } from 'react-router-dom';
 import {
   AdministrativeTab,
   RelationshipTab,
@@ -32,6 +33,9 @@ function PatientRecord() {
   return (
     <main className='container'>
       <h1>Dossier du patient</h1>
+      <Link className='align-right' to='../patient-list'>
+        Liste des patients
+      </Link>
       <Tabs>
         <TabList>
           <Tab>Fiche Administrative</Tab>

@@ -1,54 +1,54 @@
 @use './assets/styles/variables';
 
-.header{
-  display:flex;
+.header {
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: .5rem;
+  padding: 0.5rem;
   @media screen and (min-width: 64em) {
-    position:fixed;
-    top:0; 
+    position: fixed;
+    top: 0;
     left: 0;
     height: 100%;
     flex-direction: column;
     background-color: var(--menu-background);
   }
 }
-.header_navbar{
+.header_navbar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 999;
   background-color: var(--menu-background);
   @media screen and (min-width: 64em) {
-   position: static;
-   width: auto;
-   background-color: transparent;
+    position: static;
+    width: auto;
+    background-color: transparent;
   }
 }
-.navbar_links{
-  display:flex;
+.navbar_links {
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding:1rem 0;
+  padding: 1rem 0;
 
   @media screen and (min-width: 64em) {
     flex-direction: column;
-    
   }
 }
 .navbar_links a {
-  color:variables.$light0;
+  color: variables.$light0;
 }
-.logo{
+.logo {
   fill: variables.$primary;
   @media screen and (min-width: 64em) {
     fill: variables.$light0;
-   }
+  }
 }
-.logout{
+.logout {
   @media screen and (min-width: 64em) {
-    color:variables.$light0;
-   }
+    color: variables.$light0;
+  }
 }
