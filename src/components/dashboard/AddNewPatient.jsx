@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { usePatient } from 'context/Patient';
 import { useForm, FormProvider } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -16,9 +17,21 @@ import './AddNewPatient.scss';
 function AddNewPatient() {
   const methods = useForm();
   const navigate = useNavigate();
+  const [patientList, setPatientList] = usePatient();
 
   function submitNewPatient(data) {
-    console.log({ ...data, history: [], family: [], staff: [] });
+    setPatientList([
+      ...patientList,
+      {
+        id: Date.now(),
+        ...data,
+        history: [],
+        treatment: [],
+        family: [],
+        staff: [],
+      },
+    ]);
+    setTimeout(() => navigate('../patient-list'));
   }
 
   return (

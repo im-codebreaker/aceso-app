@@ -17,6 +17,7 @@ function SettingsAccountDelete() {
       </div>
       <Button
         type='button'
+        color='danger'
         onClick={() => alert('Aceso est en cours de développement.')}
       >
         Supprimer mon compte

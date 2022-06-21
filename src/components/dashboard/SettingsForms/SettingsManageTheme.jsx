@@ -42,7 +42,9 @@ function SettingsManageTheme({ handleSubmit }) {
             <Label>Sombre</Label>{' '}
           </div>
         </FormGroup>
-        <Button type='submit'>Enregistrer</Button>
+        <Button type='submit' color='success'>
+          Enregistrer
+        </Button>
       </Form>
     </div>
   );

@@ -59,7 +59,9 @@ function SettingsManageInformation({ handleSubmit }) {
             <Input name='city' placeholder='Marseille' />
           </FormGroup>
         </div>
-        <Button type='submit'>Enregistrer</Button>
+        <Button type='submit' color='success'>
+          Enregistrer
+        </Button>
       </Form>
     </div>
   );

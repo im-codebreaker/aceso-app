@@ -1,0 +1,57 @@
+[
+  {
+    "category": "Paramètres anthropométriques",
+    "list": [
+      {
+        "name": "Mensurations",
+        "description": "La mesure des mensurations permet d'évaluer le développement staturo-pondéral du patient, ou de surveiller un régime ou une thérapeutique et de calculer son indice de masse corporel (IMC).",
+        "url": "https://www.espacesoignant.com/soignant/pratiques-de-soins/mensurations"
+      },
+      {
+        "name": "Poids",
+        "description": "La mesure du poids permet d'évaluer le développement staturo-pondéral du patient, ou de surveiller un régime ou une thérapeutique. Par abus de langage, on emploie le terme « poids » comme synonyme de la « masse ». Effectivement, la masse correspond à la quantité de matière exprimée en Kilogramme (kg), alors que le poids est la force exercée sur un corps massique du faite de la pesanteur, exprimée en Newton (N).",
+        "url": "https://www.espacesoignant.com/soignant/pratiques-de-soins/poids"
+      }
+    ]
+  },
+  {
+    "category": "Paramètres cardio-circulatoires",
+    "list": [
+      {
+        "name": "Fréquence cardiaque: par auscultation",
+        "description": "La fréquence cardiaque est le nombre de contractions qu'effectue le coeur, mesurées par le nombre de contractions ventriculaires par minute, exprimée en battement par minute (bpm).",
+        "url": "https://www.espacesoignant.com/soignant/pratiques-de-soins/frequence-cardiaque-methode-auscultatoire"
+      },
+      {
+        "name": "Fréquence cardiaque : par palpation (pouls)",
+        "description": "La fréquence cardiaque est le nombre de contractions qu'effectue le coeur, mesurées par le nombre de contractions ventriculaires par minute, exprimée en battement par minute (bpm).",
+        "url": "https://www.espacesoignant.com/soignant/pratiques-de-soins/frequence-cardiaque-methode-palpatoire-pouls"
+      },
+      {
+        "name": "Pression artérielle : par auscultation",
+        "description": "La pression artérielle est la force exercée par le sang sur les parois artérielles exprimée en millimètres de mercure (mmHg).",
+        "url": "https://www.espacesoignant.com/soignant/pratiques-de-soins/pression-arterielle-non-invasive-pni-methode-auscultatoire"
+      },
+      {
+        "name": "Pression artérielle : par palpation",
+        "description": "La pression artérielle est la force exercée par le sang sur les parois artérielles exprimée en millimètres de mercure (mmHg).",
+        "url": "https://www.espacesoignant.com/soignant/pratiques-de-soins/pression-arterielle-non-invasive-pni-methode-palpatoire"
+      },
+      {
+        "name": "Pression artérielle : par cathéter artériel",
+        "description": "Le cathéter artériel est un dispositif permettant un accès artériel afin de mesurer la pression artérielle, de manière invasive et continue, et de réaliser des prélèvements de sang artériel. La pression artérielle sanglante ou invasive, est une technique invasive de monitorage de la pression artérielle intra-vasculaire par un cathéter artériel.",
+        "url": "https://www.espacesoignant.com/soignant/pratiques-de-soins/catheter-arteriel-pression-arterielle-sanglante"
+      },
+      {
+        "name": "Electrocardiogramme : réalisation",
+        "description": "L'électrocardiographie (ECG) est l'enregistrement des ondes électrique témoignant de l'activité du coeur, via des électrodes cutanées positionnées dans les différents points du corps, et de restituer ce tracé électrique sur un papier, l'électrocardiogramme.",
+        "url": "https://www.espacesoignant.com/soignant/pratiques-de-soins/electrocardiographie-realisation-electrocardiogramme-ecg"
+      },
+      {
+        "name": "Electrocardiogramme : interprétation",
+        "description": "L'électrocardiographie (ECG) est l'enregistrement des ondes électrique témoignant de l'activité du coeur, via des électrodes cutanées positionnées dans les différents points du corps, et de restituer ce tracé électrique sur un papier, l'électrocardiogramme.",
+        "url": "https://www.espacesoignant.com/soignant/pratiques-de-soins/electrocardiographie-interpretation-electrocardiogramme-ecg"
+      }
+    ]
+  }
+]

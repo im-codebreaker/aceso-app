@@ -28,7 +28,9 @@ function SettingsManagePassword({ handleSubmit }) {
           <Label>Confirmer nouveau mot de passe</Label>
           <Input name='passwordConfirmation' placeholder='**********' />
         </FormGroup>
-        <Button type='submit'>Enregistrer</Button>
+        <Button type='submit' color='success'>
+          Enregistrer
+        </Button>
       </Form>
     </div>
   );

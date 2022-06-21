@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Button, Card, Modal } from 'components/ui';
 import { AddNewRelation } from '../AddNewRelation';
 
-function RelationshipTab({ family, staff }) {
+function RelationshipTab({ patient }) {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -10,7 +10,7 @@ function RelationshipTab({ family, staff }) {
       <div className='relationship_wrapper'>
         <h2>Entourage / Personnes ressources</h2>
         <ul className='relationship_wrapper-list'>
-          {family.map((person) => {
+          {patient.family.map((person) => {
             return (
               <li key={person.id}>
                 <Card person={person} />
@@ -27,7 +27,7 @@ function RelationshipTab({ family, staff }) {
       <div className='relationship_wrapper'>
         <h2>Intervenants / Équipe médicale</h2>
         <ul className='relationship_wrapper-list'>
-          {staff.map((person) => {
+          {patient.staff.map((person) => {
             return (
               <li key={person.id}>
                 <Card person={person} />
@@ -43,7 +43,7 @@ function RelationshipTab({ family, staff }) {
       </div>
       {isOpen && (
         <Modal id='portal-container'>
-          <AddNewRelation setIsOpen={setIsOpen} />
+          <AddNewRelation patient={patient} setIsOpen={setIsOpen} />
         </Modal>
       )}
     </section>

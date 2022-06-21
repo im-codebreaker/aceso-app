@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Button, Icon, Modal, SearchInput, Table } from 'components/ui';
 import { AddNewTreatment } from '../AddNewTreatment';
 
-function TreatmentTab({ treatment, handleTreatmentDelete }) {
+function TreatmentTab({ patient, handleTreatmentDelete }) {
   const [inputText, setInputText] = React.useState('');
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -10,7 +10,7 @@ function TreatmentTab({ treatment, handleTreatmentDelete }) {
     setInputText(e.target.value);
   }
 
-  const filteredTreatment = treatment.filter((el) => {
+  const filteredTreatment = patient.treatment.filter((el) => {
     if (inputText === '') {
       return el;
     } else {
@@ -71,7 +71,7 @@ function TreatmentTab({ treatment, handleTreatmentDelete }) {
       </div>
       {isOpen && (
         <Modal id='portal-container'>
-          <AddNewTreatment setIsOpen={setIsOpen} />
+          <AddNewTreatment patient={patient} setIsOpen={setIsOpen} />
         </Modal>
       )}
     </section>

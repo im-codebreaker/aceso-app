@@ -9,18 +9,13 @@ function PatientList() {
   let [patientList] = usePatient();
   let navigate = useNavigate();
 
-  const [patient, setPatient] = React.useState([]);
   const [inputText, setInputText] = React.useState('');
-
-  React.useEffect(() => {
-    setPatient(patientList);
-  }, [patientList]);
 
   function handleChangeText(e) {
     setInputText(e.target.value);
   }
 
-  const filteredPatient = patient.filter((el) => {
+  const filteredPatient = patientList.filter((el) => {
     if (inputText === '') {
       return el;
     } else {
@@ -64,11 +59,10 @@ function PatientList() {
             </thead>
             <tbody>
               {filteredPatient.map((patient) => {
-                console.log(patient.birthday);
                 return (
                   <tr key={patient.id}>
                     <td>
-                      <Icon name={patient.sex} />
+                      <Icon name={patient.gender} />
                     </td>
                     <td>
                       {patient.lastName} {patient.firstName}

@@ -4,7 +4,7 @@
 .btn {
   &:disabled {
     cursor: not-allowed;
-    background-color: variables.$light2;
+    background-color: variables.$dark5;
   }
   cursor: pointer;
   padding: functions.space(1) functions.space(2);
@@ -20,6 +20,35 @@
   text-align: center;
   width: 100%;
 }
+.btn-primary.outlined,
+.btn-secondary.outlined,
+.btn-success.outlined,
+.btn-danger.outlined {
+  &:hover:not(:disabled) {
+    color: variables.$light0;
+  }
+  &:disabled {
+    color: variables.$dark5;
+    border-color: variables.$dark5;
+  }
+  background-color: transparent;
+}
+
+.btn-primary.ghost,
+.btn-secondary.ghost,
+.btn-success.ghost,
+.btn-danger.ghost {
+  &:hover:not(:disabled) {
+    background-color: transparent;
+  }
+  &:active:not(:disabled) {
+    background-color: transparent;
+  }
+  &:focus:not(:disabled) {
+    outline: none;
+  }
+  background-color: transparent;
+}
 .btn-primary {
   &:hover:not(:disabled) {
     background-color: variables.$primaryLighter;
@@ -31,6 +60,22 @@
     outline: 3px solid variables.$primaryFocus;
   }
   background-color: variables.$primary;
+}
+.btn-primary.outlined {
+  border: 1px solid variables.$primaryLighter;
+  color: variables.$primaryLighter;
+}
+.btn-primary.ghost {
+  &:hover:not(:disabled) {
+    color: variables.$primaryDarker;
+  }
+  &:active:not(:disabled) {
+    color: variables.$primaryLighter;
+  }
+  &:focus:not(:disabled) {
+    text-decoration: underline;
+  }
+  color: variables.$primary;
 }
 .btn-secondary {
   &:hover:not(:disabled) {
@@ -44,34 +89,41 @@
   }
   background-color: variables.$secondary;
 }
-.btn-outlined {
-  &:disabled {
-    color: variables.$light0;
-    border: none;
-  }
-  &:hover:not(:disabled) {
-    background-color: variables.$primaryOutlineHover;
-  }
-  &:focus:not(:disabled) {
-    outline: 3px solid variables.$primaryFocus;
-  }
-  border: 1px solid variables.$primaryLighter;
-  color: variables.$primaryLighter;
-  background-color: transparent;
+.btn-secondary.outlined {
+  border: 1px solid variables.$secondaryLighter;
+  color: variables.$secondaryLighter;
 }
-.btn-ghost {
-  &:disabled {
-    color: variables.$dark2;
-    background: none;
-  }
+.btn-success {
   &:hover:not(:disabled) {
-    color: variables.$primaryLighter;
+    background-color: variables.$success1;
+  }
+  &:active:not(:disabled) {
+    background-color: variables.$success1;
   }
   &:focus:not(:disabled) {
-    outline: 3px solid variables.$primaryFocus;
+    outline: 3px solid variables.$successFocus;
   }
-  color: variables.$primary;
-  background: none;
+  background-color: variables.$success2;
+}
+.btn-success.outlined {
+  border: 1px solid variables.$success2;
+  color: variables.$success2;
+}
+.btn-danger {
+  &:hover:not(:disabled) {
+    background-color: variables.$error1;
+  }
+  &:active:not(:disabled) {
+    background-color: variables.$error1;
+  }
+  &:focus:not(:disabled) {
+    outline: 3px solid variables.$errorFocus;
+  }
+  background-color: variables.$error2;
+}
+.btn-danger.outlined {
+  border: 1px solid variables.$error2;
+  color: variables.$error2;
 }
 .btn-small {
   font-size: variables.$labelSmall;

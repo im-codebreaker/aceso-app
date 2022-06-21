@@ -47,11 +47,11 @@ function PatientRecord() {
           <AdministrativeTab patient={patient} />
         </TabPanel>
         <TabPanel>
-          <RelationshipTab family={patient.family} staff={patient.staff} />
+          <RelationshipTab patient={patient} />
         </TabPanel>
         <TabPanel>
           <TreatmentTab
-            treatment={patient.treatment}
+            patient={patient}
             handleTreatmentDelete={handleTreatmentDelete}
           />
         </TabPanel>

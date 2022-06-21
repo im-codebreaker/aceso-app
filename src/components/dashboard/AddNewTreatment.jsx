@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { usePatient } from 'context/Patient';
 import { useForm, FormProvider } from 'react-hook-form';
 import {
   Button,
@@ -10,8 +11,9 @@ import {
   Label,
 } from 'components/ui';
 
-function AddNewTreatment({ setIsOpen }) {
+function AddNewTreatment({ patient, setIsOpen }) {
   const methods = useForm();
+  const [, setPatientList] = usePatient();
 
   function submitNewTreatment({
     drugName,
@@ -21,12 +23,28 @@ function AddNewTreatment({ setIsOpen }) {
     treatmentStart,
     treatmentEnd,
   }) {
-    console.log({
-      drugName,
-      frequency: [Number(morning), Number(noon), Number(evening)],
-      treatmentStart,
-      treatmentEnd,
+    const updatedPatient = { ...patient };
+
+    updatedPatient['treatment'] = [
+      ...updatedPatient['treatment'],
+      {
+        id: Date.now(),
+        drugName,
+        frequency: [Number(morning), Number(noon), Number(evening)],
+        treatmentStart,
+        treatmentEnd,
+      },
+    ];
+
+    setPatientList((prevState) => {
+      return prevState.map((obj) => {
+        if (obj.id === patient.id) {
+          obj = updatedPatient;
+        }
+        return obj;
+      });
     });
+
     setTimeout(() => {
       setIsOpen(false);
     }, 2000);

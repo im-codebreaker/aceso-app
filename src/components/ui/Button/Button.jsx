@@ -4,22 +4,18 @@ import './Button.scss';
 function Button({
   children,
   className = '',
-  disabled = false,
   fullWidth = false,
+  color = 'primary',
   size = 'medium',
-  type = 'button',
-  variant = 'primary',
+  variant = 'standard',
   ...rest
 }) {
+  const defineClass = `btn btn-${size} btn-${color} ${variant} ${
+    fullWidth ? 'btn-fw' : ''
+  } ${className}`.trim();
+
   return (
-    <button
-      type={type}
-      className={`btn btn-${size} btn-${variant} ${
-        fullWidth ? 'btn-fw' : ''
-      } ${className}`.trim()}
-      disabled={disabled}
-      {...rest}
-    >
+    <button className={defineClass} {...rest}>
       {children}
     </button>
   );

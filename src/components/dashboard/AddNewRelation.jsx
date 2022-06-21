@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { usePatient } from 'context/Patient';
 import { useForm, FormProvider } from 'react-hook-form';
 import {
   Button,
@@ -11,9 +12,9 @@ import {
   Label,
 } from 'components/ui';
 
-function AddNewRelation({ setIsOpen }) {
+function AddNewRelation({ patient, setIsOpen }) {
   const methods = useForm();
-
+  const [, setPatientList] = usePatient();
   function submitNewRelation({
     relationType,
     firstName,
@@ -23,12 +24,28 @@ function AddNewRelation({ setIsOpen }) {
     address,
     mail,
   }) {
-    console.log(relationType, {
-      firstName,
-      lastName,
-      relation,
-      contact: { phone, mail, address },
+    const updatedPatient = { ...patient };
+
+    updatedPatient[relationType] = [
+      ...patient[relationType],
+      {
+        id: Date.now(),
+        firstName,
+        lastName,
+        relation,
+        contact: { phone, address, mail },
+      },
+    ];
+
+    setPatientList((prevState) => {
+      return prevState.map((obj) => {
+        if (obj.id === patient.id) {
+          obj = updatedPatient;
+        }
+        return obj;
+      });
     });
+
     setTimeout(() => {
       setIsOpen(false);
     }, 2000);
