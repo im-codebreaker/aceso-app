@@ -6,3 +6,7 @@ export function calculateAge(birthday) {
   }
   return;
 }
+
+export function getKeyByValue(obj, value) {
+  return Object.keys(obj).find((key) => obj[key] === value);
+}

@@ -1,0 +1,9 @@
+@use '../../../assets/styles/variables';
+@use '../../../assets/styles/functions';
+
+.select {
+  padding: functions.space(1) functions.space(2);
+  border: 1px solid variables.$light4;
+  border-radius: 4px;
+  color: var(--label-color);
+}

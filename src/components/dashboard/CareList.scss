@@ -1,0 +1,119 @@
+@use './assets/styles/variables';
+@use './assets/styles/functions';
+
+.section_carelist-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: functions.space(2);
+
+  @media screen and (min-width: 58.875em) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (min-width: 90em) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.carelist_list-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-self: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  z-index: 3;
+  border-radius: 0.5rem;
+  color: variables.$light0;
+  background-color: variables.$primary;
+  box-shadow: var(--elevation4);
+}
+.carelist_list-item > * {
+  z-index: 3;
+}
+.carelist_list-item::before {
+  content: '';
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  z-index: 1;
+}
+.carelist_list-item::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 25%;
+  width: 600px;
+  height: 600px;
+  transform: rotate(242deg);
+  z-index: 0;
+  background: transparent url('/assets/images/blob.svg') center center no-repeat;
+  background-size: contain;
+}
+.carelist_list-item::before {
+  top: 8px;
+  right: 16px;
+}
+.carelist_list-item.params::before {
+  background: transparent url('/assets/images/Blood Pressure.png') center center
+    no-repeat;
+}
+.carelist_list-item.hygiene::before {
+  background: transparent url('/assets/images/Hand Sanitizer.png') center center
+    no-repeat;
+}
+.carelist_list-item.preventive::before {
+  background: transparent url('/assets/images/Gloves.png') center center
+    no-repeat;
+}
+.carelist_list-item.preparation::before {
+  background: transparent url('/assets/images/Mortar.png') center center
+    no-repeat;
+}
+.carelist_list-item.administration::before {
+  background: transparent url('/assets/images/Pills.png') center center
+    no-repeat;
+}
+.carelist_list-item.bandages::before {
+  background: transparent url('/assets/images/Plastrer.png') center center
+    no-repeat;
+}
+.carelist_list-item.samples::before {
+  background: transparent url('/assets/images/Syringe.png') center center
+    no-repeat;
+}
+.carelist_list-item.cathether::before {
+  background: transparent url('/assets/images/Infusion.png') center center
+    no-repeat;
+}
+.carelist_list-item.probes::before {
+  background: transparent url('/assets/images/Masker.png') center center
+    no-repeat;
+}
+.carelist_list-item.emergency::before {
+  background: transparent url('/assets/images/Defibrillator.png') center center
+    no-repeat;
+}
+.carelist_list-item.ergonomy::before {
+  background: transparent url('/assets/images/Chair Wheel.png') center center
+    no-repeat;
+}
+.list_item-header {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 0.5rem;
+}
+.carelist_list-item p {
+  height: 200px;
+}
+.list_item-header h2 {
+  font-size: 1rem;
+  color: variables.$light0;
+}
+.list_item-header span {
+  font-size: 0.75rem;
+}
+.technical_link {
+  color: variables.$light0;
+}

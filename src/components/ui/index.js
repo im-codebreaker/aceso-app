@@ -13,4 +13,5 @@ export * from './Label/Label';
 export * from './Modal/Modal';
 export * from './Radio/Radio';
 export * from './SearchInput/SearchInput';
+export * from './Select/Select';
 export * from './Tables/Table';
