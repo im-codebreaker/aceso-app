@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useAuth } from 'context/Auth';
 import { Button, Icon } from 'components/ui';
 import './Navigation.scss';
@@ -20,34 +20,34 @@ function Navigation() {
       <nav className='header_navbar'>
         <ul className='navbar_links'>
           <li>
-            <Link to='/dashboard'>
-              <Icon name='dashboard' />
-              <span className='visible-hidden'>Overview</span>
-            </Link>
+            <NavLink to='overview'>
+              <Icon name='dashboard' aria-label='Tableau de bord' />
+              <span className='visible-hidden'>Tableau de bord</span>
+            </NavLink>
           </li>
           <li>
-            <Link to='patient-list'>
+            <NavLink to='patient-list'>
               <Icon name='survey' />
-              <span className='visible-hidden'>Patient List</span>
-            </Link>
+              <span className='visible-hidden'>Liste des patients</span>
+            </NavLink>
           </li>
           <li>
-            <Link to='care-list'>
+            <NavLink to='care-list'>
               <Icon name='capsule' />
-              <span className='visible-hidden'>Nursing Care List</span>
-            </Link>
+              <span className='visible-hidden'>Liste des soins</span>
+            </NavLink>
           </li>
           <li>
-            <Link to='organization'>
+            <NavLink to='organization'>
               <Icon name='hospital' />
-              <span className='visible-hidden'>Organization</span>
-            </Link>
+              <span className='visible-hidden'>Mon cabinet infirmier</span>
+            </NavLink>
           </li>
           <li>
-            <Link to='settings'>
+            <NavLink to='settings'>
               <Icon name='settings-3' />
-              <span className='visible-hidden'>Settings</span>
-            </Link>
+              <span className='visible-hidden'>Paramètres</span>
+            </NavLink>
           </li>
         </ul>
       </nav>

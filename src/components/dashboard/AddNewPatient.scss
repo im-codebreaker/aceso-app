@@ -9,6 +9,9 @@
     gap: 40px;
   }
 }
+.form_add-patient .button-group {
+  grid-column: 2/3;
+}
 .patient_status {
   grid-area: a;
 }

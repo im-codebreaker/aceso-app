@@ -15,3 +15,4 @@ export * from './Radio/Radio';
 export * from './SearchInput/SearchInput';
 export * from './Select/Select';
 export * from './Tables/Table';
+export * from './Toast/Toast';

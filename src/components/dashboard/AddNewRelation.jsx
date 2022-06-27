@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as yup from 'yup';
 import { usePatient } from 'context/Patient';
 import { useForm, FormProvider } from 'react-hook-form';
 import {
@@ -11,9 +12,25 @@ import {
   Radio,
   Label,
 } from 'components/ui';
+import { yupResolver } from '@hookform/resolvers/yup';
 
+const schema = yup.object({
+  relationType: yup.string().required(),
+  lastName: yup.string().required('Nom de famille est un champ requis'),
+  firstName: yup.string().required('Prénom est un champ requis'),
+  relation: yup.string().required('Relation est un champ requis'),
+  phone: yup
+    .string()
+    .matches(/^[0-9]+$/, 'Doit être uniquement des chiffres')
+    .min(10, 'Doit comporter exactement 10 chiffres')
+    .max(10, 'Doit comporter exactement 10 chiffres'),
+  address: yup.string().required('Adresse est un champ requis'),
+  mail: yup.string(),
+});
 function AddNewRelation({ patient, setIsOpen }) {
-  const methods = useForm();
+  const methods = useForm({
+    resolver: yupResolver(schema),
+  });
   const [, setPatientList] = usePatient();
   function submitNewRelation({
     relationType,
@@ -95,7 +112,7 @@ function AddNewRelation({ patient, setIsOpen }) {
         <div className='group-row'>
           <FormGroup>
             <Label>Téléphone</Label>
-            <Input name='phone' placeholder='06.32.32.32.32' />
+            <Input name='phone' placeholder='0632321232' />
           </FormGroup>
           <FormGroup>
             <Label>Adresse</Label>

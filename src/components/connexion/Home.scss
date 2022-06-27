@@ -4,12 +4,14 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 100vh ;
+  height: 100vh;
   padding-bottom: functions.space(4);
+
   p {
     padding-bottom: functions.space(8);
   }
 }
+
 .home_footer {
   padding-top: functions.space(8);
 }

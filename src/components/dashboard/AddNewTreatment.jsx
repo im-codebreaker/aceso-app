@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as yup from 'yup';
 import { usePatient } from 'context/Patient';
 import { useForm, FormProvider } from 'react-hook-form';
 import {
@@ -10,9 +11,29 @@ import {
   FormTitle,
   Label,
 } from 'components/ui';
+import { yupResolver } from '@hookform/resolvers/yup';
 
+const schema = yup.object({
+  drugName: yup.string().required('Nom du médicament est un champ requis'),
+  morning: yup
+    .number()
+    .required('Matin est un champ requis')
+    .typeError('La valeur doit être un nombre'),
+  noon: yup
+    .number()
+    .required('Midi est un champ requis')
+    .typeError('La valeur doit être un nombre'),
+  evening: yup
+    .number()
+    .required('Soir est un champ requis')
+    .typeError('La valeur doit être un nombre'),
+  treatmentStart: yup.string().required('Date de début est un champ requis'),
+  treatmentEnd: yup.string().required('Date de fin est un champ requis'),
+});
 function AddNewTreatment({ patient, setIsOpen }) {
-  const methods = useForm();
+  const methods = useForm({
+    resolver: yupResolver(schema),
+  });
   const [, setPatientList] = usePatient();
 
   function submitNewTreatment({

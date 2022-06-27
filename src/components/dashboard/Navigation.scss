@@ -36,10 +36,16 @@
 
   @media screen and (min-width: 64em) {
     flex-direction: column;
+    gap: 4rem;
   }
 }
 .navbar_links a {
   color: variables.$light0;
+}
+.navbar_links .icon-ri.large {
+  @media screen and (min-width: 64em) {
+    font-size: 1.5rem;
+  }
 }
 .logo {
   fill: variables.$primary;

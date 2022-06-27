@@ -16,7 +16,14 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import './SignUpForm.scss';
 
 const schema = yup.object({
-  fullname: yup.string().min(3).required(),
+  lastName: yup.string('Nom doit faire plus de 3 caractères').min(3).required(),
+  firstName: yup.string().min(3).required(),
+  rpps: yup
+    .string()
+    .matches(/^[0-9]+$/, 'Doit être uniquement des chiffres')
+    .min(11, 'Doit comporter exactement 11 chiffres')
+    .max(11, 'Doit comporter exactement 11 chiffres')
+    .required(),
   email: yup.string().email().required(),
   password: yup.string().required(),
 });

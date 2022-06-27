@@ -45,7 +45,7 @@ function App() {
             />
           </Route>
           <Route path='dashboard' element={<PrivateRoute />}>
-            <Route index element={<Overview />} />
+            <Route path='overview' element={<Overview />} />
             <Route path='patient-list' element={<PatientList />} />
             <Route
               path='patient-record/:patientId'

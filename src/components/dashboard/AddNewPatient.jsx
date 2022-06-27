@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as yup from 'yup';
 import { usePatient } from 'context/Patient';
 import { useForm, FormProvider } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
@@ -11,13 +12,67 @@ import {
   FormTitle,
   Radio,
   Label,
+  Toast,
 } from 'components/ui';
+import { yupResolver } from '@hookform/resolvers/yup';
 import './AddNewPatient.scss';
 
+const schema = yup.object({
+  gender: yup.string().required(),
+  lastName: yup
+    .string()
+    .min(3, 'Le nom doit contenir minimum 3 caractères')
+    .required('Nom de famille est un champ requis'),
+  firstName: yup.string().required('Prénom est un champ requis'),
+  birthday: yup
+    .string()
+    .matches(
+      /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/,
+      'Doit être au format JJ/MM/AAAA'
+    )
+    .required(),
+  birthPlace: yup.string().required('Lieu de naissance est un champ requis'),
+  maidenName: yup.string(),
+  relationStatus: yup.string().required('Situation de vie est un champ requis'),
+  environment: yup
+    .string()
+    .required('Environnement de vie est un champ requis'),
+  alarm: yup.string().required(),
+  address: yup.string().required('Adresse est un champ requis'),
+  zip: yup
+    .string()
+    .matches(/^[0-9]+$/, 'Doit être uniquement des chiffres')
+    .min(5, 'Doit comporter exactement 5 chiffres')
+    .max(5, 'Doit comporter exactement 5 chiffres')
+    .required('Code Postal est un champ requis'),
+  city: yup.string().required('Ville est un champ requis'),
+  mobile: yup
+    .string()
+    .matches(/^[0-9]+$/, 'Doit être uniquement des chiffres')
+    .min(10, 'Doit comporter exactement 10 chiffres')
+    .max(10, 'Doit comporter exactement 10 chiffres'),
+  phone: yup
+    .string()
+    .matches(/^[0-9]+$/, 'Doit être uniquement des chiffres')
+    .min(10, 'Doit comporter exactement 10 chiffres')
+    .max(10, 'Doit comporter exactement 10 chiffres'),
+  ssn: yup
+    .string()
+    .matches(/^[0-9]+$/, 'Doit être uniquement des chiffres')
+    .min(13, 'Doit comporter exactement 13 chiffres')
+    .max(13, 'Doit comporter exactement 13 chiffres'),
+  ssnCity: yup.string().required('Caisse est un champ requis'),
+  doctor: yup.string().required('Médecin traitant est un champ requis'),
+  insurance: yup.string().required('Mutuelle est un champ requis'),
+});
+
 function AddNewPatient() {
-  const methods = useForm();
+  const methods = useForm({
+    resolver: yupResolver(schema),
+  });
   const navigate = useNavigate();
   const [patientList, setPatientList] = usePatient();
+  const [isCreated, setIsCreated] = React.useState(null);
 
   function submitNewPatient(data) {
     setPatientList([
@@ -31,7 +86,9 @@ function AddNewPatient() {
         staff: [],
       },
     ]);
-    setTimeout(() => navigate('../patient-list'));
+    setIsCreated(true);
+    setTimeout(() => setIsCreated(null), 1500);
+    setTimeout(() => navigate('../patient-list'), 1000);
   }
 
   return (
@@ -137,11 +194,11 @@ function AddNewPatient() {
             <div className='group-row'>
               <FormGroup>
                 <Label>Portable</Label>
-                <Input name='mobile' placeholder='06.01.02.06.04' />
+                <Input name='mobile' placeholder='0601020604' />
               </FormGroup>
               <FormGroup>
                 <Label>Fixe</Label>
-                <Input name='phone' placeholder='04.91.23.32.23' />
+                <Input name='phone' placeholder='0491233223' />
               </FormGroup>
             </div>
           </div>
@@ -182,6 +239,12 @@ function AddNewPatient() {
           </div>
         </Form>
       </FormProvider>
+
+      {isCreated && (
+        <Toast type='success' className={isCreated ? 'open' : 'close'}>
+          Patient crée
+        </Toast>
+      )}
     </main>
   );
 }

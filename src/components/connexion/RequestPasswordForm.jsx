@@ -50,6 +50,9 @@ function RequestPasswordForm() {
               />
             )}
           </FormGroup>
+          <Button type='button' variant='ghost' onClick={() => navigate(-1)}>
+            Retour
+          </Button>
           <Button type='submit'>Demander un lien</Button>
         </Form>
       </FormProvider>

@@ -3,45 +3,46 @@
 /*------------------------------------*\
   #USE FILES
 \*------------------------------------*/
-
-@use './assets/styles/functions';
-@use './assets/styles/variables';
+@import './assets/styles/reset';
+@import './assets/styles/fonts';
+@import './assets/styles/functions';
+@import './assets/styles/variables';
 
 /*------------------------------------*\
   #GLOBAL
 \*------------------------------------*/
 
 :root {
-  --text-color: #{variables.$dark1};
-  --title-color: #{variables.$primary};
-  --label-color: #{variables.$dark3};
-  --placeholder-color: #{variables.$dark4};
-  --link-color: #{variables.$primary};
-  --menu-background: #{variables.$primary};
-  --background-color: #{variables.$light0};
-  --table-background-color: #{variables.$light1};
-  --elevation0: #{variables.$elevationLight0};
-  --elevation1: #{variables.$elevationLight1};
-  --elevation2: #{variables.$elevationLight2};
-  --elevation3: #{variables.$elevationLight3};
-  --elevation4: #{variables.$elevationLight4};
-  --elevation5: #{variables.$elevationLight5};
+  --text-color: #{$dark1};
+  --title-color: #{$primary};
+  --label-color: #{$dark3};
+  --placeholder-color: #{$dark4};
+  --link-color: #{$primary};
+  --menu-background: #{$primary};
+  --background-color: #{$light0};
+  --table-background-color: #{$light1};
+  --elevation0: #{$elevationLight0};
+  --elevation1: #{$elevationLight1};
+  --elevation2: #{$elevationLight2};
+  --elevation3: #{$elevationLight3};
+  --elevation4: #{$elevationLight4};
+  --elevation5: #{$elevationLight5};
 }
 html[data-theme='dark'] {
-  --text-color: #{variables.$light1};
-  --title-color: #{variables.$primaryLighter};
-  --label-color: #{variables.$light3};
-  --placeholder-color: #{variables.$light4};
-  --link-color: #{variables.$primaryLighter};
-  --menu-background: #{variables.$primaryLighter};
-  --background-color: #{variables.$dark0};
-  --table-background-color: #{variables.$dark1};
-  --elevation0: #{variables.$elevationDark0};
-  --elevation1: #{variables.$elevationDark1};
-  --elevation2: #{variables.$elevationDark2};
-  --elevation3: #{variables.$elevationDark3};
-  --elevation4: #{variables.$elevationDark4};
-  --elevation5: #{variables.$elevationDark5};
+  --text-color: #{$light1};
+  --title-color: #{$primaryLighter};
+  --label-color: #{$light3};
+  --placeholder-color: #{$light4};
+  --link-color: #{$primaryLighter};
+  --menu-background: #{$primaryLighter};
+  --background-color: #{$dark0};
+  --table-background-color: #{$dark1};
+  --elevation0: #{$elevationDark0};
+  --elevation1: #{$elevationDark1};
+  --elevation2: #{$elevationDark2};
+  --elevation3: #{$elevationDark3};
+  --elevation4: #{$elevationDark4};
+  --elevation5: #{$elevationDark5};
 }
 h1,
 h2,
@@ -53,25 +54,25 @@ h6 {
   color: var(--title-color);
 }
 h1 {
-  font-size: variables.$heading1;
+  font-size: $heading1;
 }
 h2 {
-  font-size: variables.$heading2;
+  font-size: $heading2;
 }
 h3 {
-  font-size: variables.$heading3;
+  font-size: $heading3;
 }
 h4 {
-  font-size: variables.$heading4;
+  font-size: $heading4;
 }
 h5 {
-  font-size: variables.$heading5;
+  font-size: $heading5;
 }
 h6 {
-  font-size: variables.$heading6;
+  font-size: $heading6;
 }
 p {
-  font-size: variables.$bodySmall;
+  font-size: $bodySmall;
 }
 body {
   font-family: contentRegular;
@@ -79,10 +80,10 @@ body {
   background-color: var(--background-color);
 }
 main {
-  padding: functions.space(5) 0;
+  padding: space(5) 0;
 }
 a {
-  font-size: variables.$labelMedium;
+  font-size: $labelMedium;
   color: var(--link-color);
   font-family: contentRegular;
 }
@@ -103,8 +104,8 @@ a {
   margin-inline: auto;
 }
 .wrapper_elevation {
-  margin: functions.space(1) 0;
-  padding: functions.space(1);
+  margin: space(1) 0;
+  padding: space(1);
   border-radius: 0.5rem;
   background-color: var(--background-color);
   box-shadow: var(--elevation4);
